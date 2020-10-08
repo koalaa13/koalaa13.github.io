@@ -1,0 +1,31 @@
+:root {
+    --gray: #808080;
+    --light-gray: #DCDCDC
+}
+
+.weather-here-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+.weather-here-title .title-caption {
+    font-size: 2.5rem;
+    color: var(--gray);
+}
+
+.weather-here-title .update-geo-button {
+    color: var(--gray);
+    background-color: var(--light-gray);
+    font-size: x-large;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.weather-here-info .main-info .title-caption {
+    font-size: 2.5rem;
+    color: var(--gray);
+}
