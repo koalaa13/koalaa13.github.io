@@ -1,17 +1,19 @@
 :root {
     --gray: #808080;
-    --light-gray: #DCDCDC
+    --light-gray: #DCDCDC;
+    --silver: #C0C0C0;
 }
 
 .weather-here-title {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
     margin: 1rem 1rem 1rem 1rem;
 }
 
 .weather-here-title .title-caption {
+    white-space: nowrap;
     font-size: 2.5rem;
     color: var(--gray);
 }
@@ -19,13 +21,74 @@
 .weather-here-title .update-geo-button {
     color: var(--gray);
     background-color: var(--light-gray);
-    font-size: x-large;
+    font-size: large;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 10px;
     border: none;
+    white-space: nowrap;
+}
+
+.weather-here-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .weather-here-info .main-info .title-caption {
-    font-size: 2.5rem;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+    font-size: 3rem;
     color: var(--gray);
+    font-weight: bold;
+}
+
+.weather-here-info .main-info {
+    white-space: nowrap;
+}
+
+.weather-here-info .main-info .weather-icon-container {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--gray);
+    padding: 1rem 1rem 1rem 1rem;
+    margin-right: 10rem;
+}
+
+.weather-here-info .main-info .weather-icon-title {
+    position: absolute;
+    color: var(--gray);
+    top: 45%;
+    left: 10%;
+}
+
+.weather-here-info .main-info .temperature-here {
+    display: inline-block;
+    font-size: 10rem;
+    color: var(--gray);
+}
+
+.weather-here-info .side-info ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.weather-here-info .side-info ul li {
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    background-color: var(--silver);
+}
+
+.weather-here-info .side-info ul li .key {
+    color: white;
+    float: left;
+    white-space: nowrap;
+}
+
+.weather-here-info .side-info ul li .value {
+    color: white;
+    float: right;
+    white-space: nowrap;
 }
