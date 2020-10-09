@@ -9,7 +9,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 0;
 }
 
 .weather-here-title .title-caption {
@@ -53,7 +53,7 @@
     height: 100px;
     border: 3px solid var(--gray);
     padding: 1rem 1rem 1rem 1rem;
-    margin-right: 10rem;
+    margin-right: 7rem;
 }
 
 .weather-here-info .main-info .weather-icon-title {
@@ -91,4 +91,17 @@
     color: white;
     float: right;
     white-space: nowrap;
+}
+
+.favourite-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.favourite-title .title-caption {
+    float: right;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    color: var(--gray);
 }
