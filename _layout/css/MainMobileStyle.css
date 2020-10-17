@@ -3,4 +3,13 @@
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
     }
+
+    .favourite-title {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .favourite-title .add-city .add-city-input {
+        width: 100%;
+    }
 }

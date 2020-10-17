@@ -2,6 +2,7 @@
     --gray: #808080;
     --light-gray: #DCDCDC;
     --silver: #C0C0C0;
+    --dark-gray: #696969
 }
 
 .weather-here-title {
@@ -26,6 +27,7 @@
     border-radius: 10px;
     border: none;
     white-space: nowrap;
+    outline: none;
 }
 
 .weather-here-info {
@@ -104,4 +106,28 @@
     white-space: nowrap;
     font-size: 2.5rem;
     color: var(--gray);
+}
+
+.favourite-title .add-city {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.favourite-title .add-city .add-city-input {
+    margin-right: 1rem;
+    padding: 0.5rem 10rem 0.5rem 1rem;
+    outline: none;
+    border-width: 0;
+    background-color: var(--light-gray);
+    color: var(--gray);
+}
+
+.add-or-close-button {
+    border-width: 0;
+    background-color: var(--dark-gray);
+    font-size: x-large;
+    color: white;
+    border-radius: 100%;
+    outline: none;
 }
