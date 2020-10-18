@@ -3,7 +3,8 @@
     --light-gray: #DCDCDC;
     --silver: #C0C0C0;
     --dark-gray: #696969;
-    --rows-count: 2;
+    --rows-count: 3;
+    --weather-info-width: 850px;
 }
 
 .weather-here-title {
@@ -33,7 +34,6 @@
 
 .weather-here-info {
     display: grid;
-    /*grid-template-areas: "main-info . . side-info side-info";*/
     grid-template-columns: 1fr 1fr;
 }
 
@@ -47,11 +47,6 @@
 
 .weather-here-info .main-info {
     white-space: nowrap;
-    /*grid-area: main-info;*/
-}
-
-.weather-here-info .side-info {
-    /*grid-area: side-info;*/
 }
 
 .weather-here-info .main-info .weather-icon-container {
@@ -75,6 +70,11 @@
     display: inline-block;
     font-size: 10rem;
     color: var(--gray);
+}
+
+.weather-here-info .side-info-container {
+    float: right;
+    width: var(--weather-info-width);
 }
 
 ul {
@@ -130,7 +130,7 @@ ul li .value {
     color: var(--gray);
 }
 
-.add-or-close-button {
+.add-button {
     border-width: 0;
     background-color: var(--dark-gray);
     font-size: x-large;
@@ -140,7 +140,63 @@ ul li .value {
 }
 
 .favorites {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(var(--rows-count), 1fr);
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.favorites .city-info {
+    width: var(--weather-info-width);
+}
+
+.favorites .city-info-title {
+    position: relative;
+}
+
+.favorites .city-info-title .close-button {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    border-width: 0;
+    background-color: var(--dark-gray);
+    font-size: large;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+}
+
+.favorites .city-info-title .city-name {
+    /*position: absolute;*/
+    /*top: 40%;*/
+    /*left: 0;*/
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+.favorites .city-info-title .temperature {
+    /*position: absolute;*/
+    /*top: 40%;*/
+    /*left: 15%;*/
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+.favorites .city-info-title .weather-icon-container {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--gray);
+    padding: 1rem 1rem 1rem 1rem;
+    margin-right: 7rem;
+}
+
+.favorites .city-info-title .weather-icon-title {
+    position: absolute;
+    font-size: x-small;
+    color: var(--gray);
+    top: 30%;
+    left: 20%;
 }

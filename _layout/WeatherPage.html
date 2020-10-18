@@ -22,28 +22,30 @@
             <div class="temperature-here">8℃</div>
         </div>
         <div class="side-info">
-            <ul>
-                <li>
-                    <span class="key">Ветер</span>
-                    <span class="value">Moderate breeze, 6.0 m/s, North-northwest</span>
-                </li>
-                <li>
-                    <span class="key">Облачность</span>
-                    <span class="value">Broken clouds</span>
-                </li>
-                <li>
-                    <span class="key">Давление</span>
-                    <span class="value">1013 hpa</span>
-                </li>
-                <li>
-                    <span class="key">Влажность</span>
-                    <span class="value">52 %</span>
-                </li>
-                <li>
-                    <span class="key">Координаты</span>
-                    <span class="value">[59.88, 30.42]</span>
-                </li>
-            </ul>
+            <div class="side-info-container">
+                <ul>
+                    <li>
+                        <span class="key">Ветер</span>
+                        <span class="value">Moderate breeze, 6.0 m/s, North-northwest</span>
+                    </li>
+                    <li>
+                        <span class="key">Облачность</span>
+                        <span class="value">Broken clouds</span>
+                    </li>
+                    <li>
+                        <span class="key">Давление</span>
+                        <span class="value">1013 hpa</span>
+                    </li>
+                    <li>
+                        <span class="key">Влажность</span>
+                        <span class="value">52 %</span>
+                    </li>
+                    <li>
+                        <span class="key">Координаты</span>
+                        <span class="value">[59.88, 30.42]</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="favourite-title">
@@ -51,13 +53,21 @@
         <div class="add-city">
             <label for="cityToAdd"></label>
             <input type="text" id="cityToAdd" placeholder="Добавить новый город" class="add-city-input"/>
-            <button type="button" class="add-or-close-button">+</button>
+            <button type="button" class="add-button">+</button>
         </div>
     </div>
     <div class="favorites">
         <div class="city-info">
-            <div class="title"></div>
-            <div class="main-info">
+            <div class="city-info-title">
+                <span class="city-name">Moscow</span>
+                <span class="temperature">8℃</span>
+                <span class="weather-icon-container">
+                    <span class="weather-icon-title">Иконка погоды</span>
+                    <!--                <img src="#" alt="" class="weather-icon"/>-->
+                </span>
+                <button type="button" class="close-button">✕</button>
+            </div>
+            <div class="city-weather-info">
                 <ul>
                     <li>
                         <span class="key">Ветер</span>
@@ -83,8 +93,51 @@
             </div>
         </div>
         <div class="city-info">
-            <div class="title"></div>
-            <div class="main-info">
+            <div class="city-info-title">
+                <span class="city-name">Moscow</span>
+                <span class="temperature">8℃</span>
+                <span class="weather-icon-container">
+                    <span class="weather-icon-title">Иконка погоды</span>
+                    <!--                <img src="#" alt="" class="weather-icon"/>-->
+                </span>
+                <button type="button" class="close-button">✕</button>
+            </div>
+            <div class="city-weather-info">
+                <ul>
+                    <li>
+                        <span class="key">Ветер</span>
+                        <span class="value">Moderate breeze, 6.0 m/s, North-northwest</span>
+                    </li>
+                    <li>
+                        <span class="key">Облачность</span>
+                        <span class="value">Broken clouds</span>
+                    </li>
+                    <li>
+                        <span class="key">Давление</span>
+                        <span class="value">1013 hpa</span>
+                    </li>
+                    <li>
+                        <span class="key">Влажность</span>
+                        <span class="value">52 %</span>
+                    </li>
+                    <li>
+                        <span class="key">Координаты</span>
+                        <span class="value">[59.88, 30.42]</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="city-info">
+            <div class="city-info-title">
+                <span class="city-name">Moscow</span>
+                <span class="temperature">8℃</span>
+                <span class="weather-icon-container">
+                    <span class="weather-icon-title">Иконка погоды</span>
+                    <!--                <img src="#" alt="" class="weather-icon"/>-->
+                </span>
+                <button type="button" class="close-button">✕</button>
+            </div>
+            <div class="city-weather-info">
                 <ul>
                     <li>
                         <span class="key">Ветер</span>

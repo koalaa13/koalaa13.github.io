@@ -1,13 +1,21 @@
-@media screen and (max-width: 1000px) {
+@media all and (max-width: 1000px) {
     .weather-here-info {
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .favourite-title {
         grid-template-columns: 1fr;
     }
 
+    .weather-here-info .side-info-container {
+        width: 100%;
+    }
+
     .favourite-title .add-city .add-city-input {
+        width: 100%;
+    }
+
+    .favorites .city-info {
         width: 100%;
     }
 }
