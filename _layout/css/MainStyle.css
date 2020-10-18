@@ -2,7 +2,8 @@
     --gray: #808080;
     --light-gray: #DCDCDC;
     --silver: #C0C0C0;
-    --dark-gray: #696969
+    --dark-gray: #696969;
+    --rows-count: 2;
 }
 
 .weather-here-title {
@@ -32,8 +33,8 @@
 
 .weather-here-info {
     display: grid;
+    /*grid-template-areas: "main-info . . side-info side-info";*/
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
 }
 
 .weather-here-info .main-info .title-caption {
@@ -46,6 +47,11 @@
 
 .weather-here-info .main-info {
     white-space: nowrap;
+    /*grid-area: main-info;*/
+}
+
+.weather-here-info .side-info {
+    /*grid-area: side-info;*/
 }
 
 .weather-here-info .main-info .weather-icon-container {
@@ -71,25 +77,25 @@
     color: var(--gray);
 }
 
-.weather-here-info .side-info ul {
+ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-.weather-here-info .side-info ul li {
+ul li {
     padding: 0.7rem;
     margin: 0.5rem 0;
     background-color: var(--silver);
 }
 
-.weather-here-info .side-info ul li .key {
+ul li .key {
     color: white;
     float: left;
     white-space: nowrap;
 }
 
-.weather-here-info .side-info ul li .value {
+ul li .value {
     color: white;
     float: right;
     white-space: nowrap;
@@ -102,6 +108,7 @@
 }
 
 .favourite-title .title-caption {
+    margin-bottom: 0.5rem;
     float: right;
     white-space: nowrap;
     font-size: 2.5rem;
@@ -130,4 +137,10 @@
     color: white;
     border-radius: 100%;
     outline: none;
+}
+
+.favorites {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(var(--rows-count), 1fr);
 }

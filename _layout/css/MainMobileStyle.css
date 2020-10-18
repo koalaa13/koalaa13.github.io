@@ -1,11 +1,9 @@
 @media screen and (max-width: 1000px) {
     .weather-here-info {
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
     }
 
     .favourite-title {
-        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
     }
 
