@@ -49,21 +49,10 @@
     white-space: nowrap;
 }
 
-.weather-here-info .main-info .weather-icon-container {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    border: 3px solid var(--gray);
-    padding: 1rem 1rem 1rem 1rem;
+.weather-here-info .main-info .weather-icon {
+    width: 150px;
+    height: 150px;
     margin-right: 7rem;
-}
-
-.weather-here-info .main-info .weather-icon-title {
-    position: absolute;
-    color: var(--gray);
-    top: 45%;
-    left: 10%;
 }
 
 .weather-here-info .main-info .temperature-here {
@@ -152,6 +141,9 @@ ul li .value {
 
 .favorites .city-info-title {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .favorites .city-info-title .close-button {
@@ -167,36 +159,19 @@ ul li .value {
 }
 
 .favorites .city-info-title .city-name {
-    /*position: absolute;*/
-    /*top: 40%;*/
-    /*left: 0;*/
+    margin-right: 1rem;
     font-weight: bold;
     font-size: 2rem;
     color: var(--gray);
 }
 
 .favorites .city-info-title .temperature {
-    /*position: absolute;*/
-    /*top: 40%;*/
-    /*left: 15%;*/
+    margin-right: 1rem;
     font-size: 2rem;
     color: var(--gray);
 }
 
-.favorites .city-info-title .weather-icon-container {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid var(--gray);
-    padding: 1rem 1rem 1rem 1rem;
-    margin-right: 7rem;
-}
-
-.favorites .city-info-title .weather-icon-title {
-    position: absolute;
-    font-size: x-small;
-    color: var(--gray);
-    top: 30%;
-    left: 20%;
+.favorites .city-info-title .city-weather-icon {
+    width: 30px;
+    height: 30px;
 }
