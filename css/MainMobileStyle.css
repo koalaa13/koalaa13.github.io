@@ -19,3 +19,37 @@
         width: 100%;
     }
 }
+
+@media all and (max-width: 470px) {
+    .weather-here-info .main-info .weather-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .weather-here-info .main-info .temperature-here {
+        font-size: 5rem;
+        color: var(--gray);
+    }
+
+    ul li .key {
+        font-size: small;
+    }
+
+
+    ul li .value {
+        font-size: small;
+    }
+
+    .weather-here-title .title-caption {
+        font-size: 1.5rem;
+    }
+
+    .weather-here-info .main-info .title-caption {
+        font-size: 2rem;
+    }
+
+    .weather-here-title .update-geo-button {
+        font-size: small;
+        padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    }
+}

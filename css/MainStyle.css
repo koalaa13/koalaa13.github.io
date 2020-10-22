@@ -4,6 +4,7 @@
     --silver: #C0C0C0;
     --dark-gray: #696969;
     --rows-count: 3;
+    --horizontal-scroll-avaiable: 290px;
 }
 
 .weather-here-title {
@@ -44,18 +45,17 @@
     font-weight: bold;
 }
 
-.weather-here-info .main-info {
-    white-space: nowrap;
-}
-
 .weather-here-info .main-info .weather-icon {
     width: 150px;
     height: 150px;
-    margin-right: 7rem;
+}
+
+.weather-here-info .main-info .weather-here-image-and-temperature {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .weather-here-info .main-info .temperature-here {
-    display: inline-block;
     font-size: 10rem;
     color: var(--gray);
 }
@@ -70,6 +70,8 @@ ul li {
     padding: 0.7rem;
     margin: 0.5rem 0;
     background-color: var(--silver);
+    box-sizing: border-box;
+    min-width: var(--horizontal-scroll-avaiable);
 }
 
 ul li .key {
@@ -110,8 +112,10 @@ ul li .value {
 }
 
 .favourite-title .add-city .add-city-input {
+    box-sizing: border-box;
+    min-width: 230px;
     margin-right: 1rem;
-    padding: 0.5rem 10rem 0.5rem 1rem;
+    padding: 0.5rem 5rem 0.5rem 1rem;
     outline: none;
     border-width: 0;
     background-color: var(--light-gray);
@@ -143,7 +147,7 @@ ul li .value {
 
 .favorites .city-info-title .close-button {
     position: absolute;
-    top: 40%;
+    top: 25%;
     right: 0;
     border-width: 0;
     background-color: var(--dark-gray);
