@@ -4,7 +4,6 @@
     --silver: #C0C0C0;
     --dark-gray: #696969;
     --rows-count: 3;
-    --weather-info-width: 850px;
 }
 
 .weather-here-title {
@@ -61,11 +60,6 @@
     color: var(--gray);
 }
 
-.weather-here-info .side-info-container {
-    float: right;
-    width: var(--weather-info-width);
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -88,6 +82,11 @@ ul li .value {
     color: white;
     float: right;
     white-space: nowrap;
+}
+
+.weather-here-info .side-info-container {
+    float: right;
+    width: 90%;
 }
 
 .favourite-title {
@@ -135,10 +134,6 @@ ul li .value {
     flex-wrap: wrap;
 }
 
-.favorites .city-info {
-    width: var(--weather-info-width);
-}
-
 .favorites .city-info-title {
     position: relative;
     display: flex;
@@ -156,6 +151,10 @@ ul li .value {
     color: white;
     border-radius: 100%;
     outline: none;
+}
+
+.favorites .city-info {
+    width: 45%;
 }
 
 .favorites .city-info-title .city-name {
