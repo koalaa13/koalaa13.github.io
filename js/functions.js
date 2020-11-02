@@ -57,7 +57,7 @@ function getFavouritesFromLocalStorage() {
 }
 
 function getSmallCityName(city) {
-    const maxCityLength = 15;
+    const maxCityLength = 20;
     if (city.length < maxCityLength) {
         return city;
     }
