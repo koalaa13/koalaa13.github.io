@@ -24,8 +24,8 @@ function setWeatherInfo(elem, weather) {
         .innerHTML = `[${weather.coord.lat.toFixed(2)}, ${weather.coord.lon.toFixed(2)}]`;
 }
 
-function getAndSetWeather(weather, divId) {
-    const elem = document.importNode(document.querySelector(divId).content, true);
+function getAndSetWeather(weather, elemId) {
+    const elem = document.importNode(document.querySelector(elemId).content, true);
     setWeatherInfo(elem, weather);
     return elem;
 }
