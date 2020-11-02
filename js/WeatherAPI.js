@@ -9,8 +9,7 @@ class WeatherAPI {
     }
 
     async getByCityCoordinates(coordinates) {
-        const [lat, lon] = [coordinates.coords.latitude, coordinates.coords.longitude];
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.key}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.coords.latitude}&lon=${coordinates.coords.longitude}&appid=${this.key}&units=metric`);
         return await response.json();
     }
 

@@ -1,10 +1,14 @@
+const favouritesLocalStorageID = 'favourites';
 const weatherAPI = new WeatherAPI();
-mainCity = document.querySelector(".weather-here-info")
+const mainCity = document.querySelector('.weather-here-info');
+const favourites = document.querySelector('.favourites');
+if (!localStorage.getItem(favouritesLocalStorageID)) {
+    localStorage.setItem(favouritesLocalStorageID, '[]');
+}
 
 updateWeatherHere();
 
-const updateButtonText = document.querySelector('.update-geo-button-text');
-const updateButtonSign = document.querySelector('.update-geo-button-sign');
-
-updateButtonText.addEventListener('click', updateWeatherHere);
-updateButtonSign.addEventListener('click', updateWeatherHere);
+document.querySelector('.update-geo-button-text').addEventListener('click', updateWeatherHere);
+document.querySelector('.update-geo-button-sign').addEventListener('click', updateWeatherHere);
+document.querySelector('#add-city').addEventListener('submit', addToFavourites);
+document.querySelector('.add-button').addEventListener('click', addToFavourites);
