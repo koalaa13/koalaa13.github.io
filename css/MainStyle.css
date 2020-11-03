@@ -110,6 +110,17 @@ ul li .value {
     width: 200px;
 }
 
+.city-waiting .waiting-info {
+    color: var(--gray);
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+.city-waiting .loading-icon {
+    height: 100px;
+    width: 100px;
+}
+
 .favourite-title {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -162,50 +173,47 @@ ul li .value {
     color: darkred;
 }
 
-/*.favorites {*/
-/*    margin-top: 0.7rem;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    flex-wrap: wrap;*/
-/*}*/
+.favourites .city-full-data {
+    width: 45%;
+}
 
-/*.favorites .city-info-title {*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: flex-start;*/
-/*}*/
+.favourites {
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-/*.favorites .city-info-title .close-button {*/
-/*    position: absolute;*/
-/*    top: 25%;*/
-/*    right: 0;*/
-/*    border-width: 0;*/
-/*    background-color: var(--dark-gray);*/
-/*    font-size: large;*/
-/*    color: white;*/
-/*    border-radius: 100%;*/
-/*    outline: none;*/
-/*}*/
+.favourites .city-info-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-/*.favorites .city-info {*/
-/*    width: 45%;*/
-/*}*/
+.favourites .city-info-title .close-button {
+    border-width: 0;
+    background-color: var(--dark-gray);
+    font-size: large;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+}
 
-/*.favorites .city-info-title .city-name {*/
-/*    margin-right: 1rem;*/
-/*    font-weight: bold;*/
-/*    font-size: 2rem;*/
-/*    color: var(--gray);*/
-/*}*/
+.favourites .city-info-title .city-name {
+    white-space: nowrap;
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 2vw;
+    color: var(--gray);
+}
 
-/*.favorites .city-info-title .temperature {*/
-/*    margin-right: 1rem;*/
-/*    font-size: 2rem;*/
-/*    color: var(--gray);*/
-/*}*/
+.favourites .city-info-title .temperature {
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: var(--gray);
+}
 
-/*.favorites .city-info-title .city-weather-icon {*/
-/*    width: 30px;*/
-/*    height: 30px;*/
-/*}*/
+.favourites .city-info-title .city-weather-icon {
+    width: 50px;
+    height: 50px;
+}

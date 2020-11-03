@@ -74,40 +74,56 @@
 </template>
 
 <template id="city">
-    <div class="city-info-title">
-        <span class="city-name"></span>
-        <span class="temperature"></span>
-        <img src="" alt="weather icon" class="city-weather-icon"/>
-        <button type="button" class="close-button">✕</button>
+    <div class="city-full-data">
+        <div class="city-info-title">
+            <span class="city-name"></span>
+            <span class="temperature"></span>
+            <img src="" alt="weather icon" class="city-weather-icon"/>
+            <button type="button" class="close-button">✕</button>
+        </div>
+        <div class="city-weather-info">
+            <ul>
+                <li class="wind-info">
+                    <span class="key">Wind</span>
+                    <span class="value"></span>
+                </li>
+                <li class="cloudiness-info">
+                    <span class="key">Cloudiness</span>
+                    <span class="value"></span>
+                </li>
+                <li class="pressure-info">
+                    <span class="key">Pressure</span>
+                    <span class="value"></span>
+                </li>
+                <li class="humidity-info">
+                    <span class="key">Humidity</span>
+                    <span class="value"></span>
+                </li>
+                <li class="coordinates-info">
+                    <span class="key">Coordinates</span>
+                    <span class="value"></span>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="city-weather-info">
-        <ul>
-            <li class="wind-info">
-                <span class="key">Wind</span>
-                <span class="value"></span>
-            </li>
-            <li class="cloudiness-info">
-                <span class="key">Cloudiness</span>
-                <span class="value"></span>
-            </li>
-            <li class="pressure-info">
-                <span class="key">Pressure</span>
-                <span class="value"></span>
-            </li>
-            <li class="humidity-info">
-                <span class="key">Humidity</span>
-                <span class="value"></span>
-            </li>
-            <li class="coordinates-info">
-                <span class="key">Coordinates</span>
-                <span class="value"></span>
-            </li>
-        </ul>
+</template>
+
+<template id="city-waiting">
+    <div class="city-full-data">
+        <div class="city-info-title">
+            <span class="city-name"></span>
+            <span class="temperature"></span>
+            <button type="button" class="close-button">✕</button>
+        </div>
+        <div class="city-waiting">
+            <div class="waiting-info">Please wait, weather info is loading...</div>
+            <img class="loading-icon" src="img/refresh.png" alt="refresh.png">
+        </div>
     </div>
 </template>
 
 <script type="text/javascript" src="js/WeatherAPI.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript" src="js/mainCity.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

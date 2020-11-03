@@ -59,7 +59,11 @@
         width: 100%;
     }
 
-    /*.favorites .city-info {*/
-    /*    width: 100%;*/
-    /*}*/
+    .favourites .city-full-data {
+        width: 100%;
+    }
+
+    .favourites .city-info-title .city-name {
+        font-size: 2rem;
+    }
 }
