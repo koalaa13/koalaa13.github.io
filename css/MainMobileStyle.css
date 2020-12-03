@@ -34,6 +34,7 @@
 
     .weather-here-info .side-info-container {
         width: 100%;
+        float: none;
     }
 
     .favourite-title {
@@ -53,6 +54,7 @@
 
     .favourite-title #add-city {
         grid-area: add-city;
+        min-width: var(--horizontal-scroll-avaiable);
     }
 
     .favourite-title #add-city .add-city-input {
@@ -63,7 +65,31 @@
         width: 100%;
     }
 
+    .favourites .city-info-title {
+        min-width: var(--horizontal-scroll-avaiable);
+    }
+
     .favourites .city-info-title .city-name {
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .weather-here-info .main-info .temperature-here {
+        font-size: max(3.5rem, 20vw);
+    }
+
+    .weather-here-info .main-info .weather-icon {
+        width: max(50px, 20vw);
+        height: max(50px, 20vw);
+    }
+
+
+    .favourites .city-info-title .city-name {
+        font-size: max(1.5rem, 7vw);
+    }
+
+    .favourite-title .title-caption {
+        font-size: max(2rem, 10vw);
     }
 }

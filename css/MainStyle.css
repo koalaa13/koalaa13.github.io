@@ -4,7 +4,7 @@
     --silver: #C0C0C0;
     --dark-gray: #696969;
     --rows-count: 3;
-    --horizontal-scroll-avaiable: 250px;
+    --horizontal-scroll-avaiable: 260px;
 }
 
 body {
@@ -61,6 +61,7 @@ body {
 .weather-here-info .main-info .weather-here-image-and-temperature {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .weather-here-info .main-info .temperature-here {
@@ -71,7 +72,7 @@ body {
 ul {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    list-style-type: none;
 }
 
 ul li {
@@ -84,7 +85,6 @@ ul li {
 
 ul li .key {
     color: white;
-    float: left;
     white-space: nowrap;
 }
 
@@ -208,7 +208,6 @@ ul li .value {
 }
 
 .favourites .city-info-title .temperature {
-    margin-right: 1rem;
     font-size: 2rem;
     color: var(--gray);
 }
