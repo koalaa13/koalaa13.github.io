@@ -7,7 +7,7 @@ function clearAndAppend(div, toAppend) {
 
 function setCityWeatherInfo(cityElem, weather) {
     cityElem.querySelector('.city-info-title .city-name')
-        .innerHTML = weather.name;
+        .innerHTML = getSmallCityName(weather.name, 8);
     cityElem.querySelector('.city-info-title .city-weather-icon')
         .src = weatherAPI.getIconURL(weather.weather[0].icon);
     cityElem.querySelector('.city-info-title .temperature')
@@ -85,7 +85,7 @@ function getFavouritesFromLocalStorage() {
 }
 
 function getSmallCityName(city, maxCityLength) {
-    if (city.length < maxCityLength) {
+    if (city.length <= maxCityLength) {
         return city;
     }
     return city.slice(0, maxCityLength) + '...';

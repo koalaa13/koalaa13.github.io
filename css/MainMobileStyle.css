@@ -72,11 +72,15 @@
     .favourites .city-info-title .city-name {
         font-size: 2rem;
     }
+
+    .weather-here-info .main-info .city-here-name {
+        font-size: 10vw;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    .weather-here-info .main-info .temperature-here {
-        font-size: max(3.5rem, 20vw);
+    .weather-here-info .main-info .city-here-name {
+        font-size: 2.5rem;
     }
 
     .weather-here-info .main-info .weather-icon {
