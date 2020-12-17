@@ -167,7 +167,6 @@ ul li .value {
 }
 
 #error {
-    white-space: nowrap;
     position: absolute;
     top: 30%;
     color: darkred;

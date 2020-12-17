@@ -90,7 +90,7 @@
 
 
     .favourites .city-info-title .city-name {
-        font-size: max(1.5rem, 7vw);
+        font-size: max(1rem, 5vw);
     }
 
     .favourite-title .title-caption {

@@ -7,7 +7,7 @@ function clearAndAppend(div, toAppend) {
 
 function setCityWeatherInfo(cityElem, weather) {
     cityElem.querySelector('.city-info-title .city-name')
-        .innerHTML = getSmallCityName(weather.name, 8);
+        .innerHTML = weather.name;
     cityElem.querySelector('.city-info-title .city-weather-icon')
         .src = weatherAPI.getIconURL(weather.weather[0].icon);
     cityElem.querySelector('.city-info-title .temperature')
@@ -96,13 +96,16 @@ function getCoordsFromResponse(response) {
 }
 
 function eraseSpaces(str) {
-    return str.replace(/\s/g, "");
+    return str.replace(/[\s.]/g, "");
 }
 
 async function addToFavourites(event) {
     event.preventDefault();
-    const input = document.getElementById('city-to-add');
+    const input = event.target[0];
     const city = input.value.trim();
+    if (city === "") {
+        return;
+    }
     input.value = '';
     let favourites = getFavouritesFromLocalStorage();
     let cityExists = false;
@@ -115,16 +118,19 @@ async function addToFavourites(event) {
     if (cityExists) {
         errorHandler('City is already in favourites.');
     } else {
+        if (!navigator.onLine) {
+            errorHandler('Internet connection lost. Try again.');
+            return;
+        }
         let response = await weatherAPI.getByCityName(city).catch(() => {
             errorHandler(`Something went wrong while getting weather in ${city}.`);
         })
         if (response.cod === 200) {
             favourites = getFavouritesFromLocalStorage();
-            const responseByCoords = await weatherAPI.getByCityCoordinates(getCoordsFromResponse(response));
-            if (favourites.includes(responseByCoords.name)) {
+            if (favourites.includes(response.name)) {
                 errorHandler('City is already in favourites.');
             } else {
-                localStorage.setItem(favouritesLocalStorageID, JSON.stringify([...favourites, responseByCoords.name]));
+                localStorage.setItem(favouritesLocalStorageID, JSON.stringify([...favourites, response.name]));
                 updateFavourites();
             }
 

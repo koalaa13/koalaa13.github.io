@@ -12,4 +12,3 @@ updateFavourites();
 document.querySelector('.update-geo-button-text').addEventListener('click', updateWeatherHere);
 document.querySelector('.update-geo-button-sign').addEventListener('click', updateWeatherHere);
 document.querySelector('#add-city').addEventListener('submit', addToFavourites);
-document.querySelector('.add-button').addEventListener('click', addToFavourites);
