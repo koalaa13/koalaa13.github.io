@@ -103,9 +103,6 @@ async function addToFavourites(event) {
     event.preventDefault();
     const input = event.target[0];
     const city = input.value.trim();
-    if (city === "") {
-        return;
-    }
     input.value = '';
     let favourites = getFavouritesFromLocalStorage();
     let cityExists = false;
