@@ -9,8 +9,13 @@
 
 html {
     min-width: 600px;
-    max-width: 800px;
     padding: 0.5rem;
     white-space: nowrap;
-    /*margin: 0 auto;*/
+}
+
+.egg-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
