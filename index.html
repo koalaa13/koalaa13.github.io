@@ -2,131 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>CsGoTeammates</title>
     <link rel="stylesheet" type="text/css" href="css/MainStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/MainMobileStyle.css">
-    <title>Weather</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
-<header class="weather-here-title">
-    <div class="title-caption">Weather here</div>
-    <button type="button" class="update-geo-button-text">Update geo</button>
-    <button type="button" class="update-geo-button-sign"></button>
+<header>
+    <div class="logo-and-enter-or-register">
+        Я ЛЮБЛЮ ЯЙЦА
+    </div>
 </header>
-<main>
-    <section class="weather-here-info"></section>
-
-    <div class="favourite-title">
-        <div class="title-caption">Favourites</div>
-        <div class="error-container">
-            <div id="error"></div>
-        </div>
-        <form id="add-city" autocomplete="off">
-            <label for="city-to-add"></label>
-            <input type="text" id="city-to-add" placeholder="Add a new city" required="required" class="add-city-input"/>
-            <button type="submit" class="add-button">+</button>
-        </form>
-    </div>
-
-    <section class="favourites"></section>
-</main>
-
-<template id="main-city-waiting">
-    <section class="waiting">
-        <div class="waiting-info">Please wait, geo position is loading...</div>
-        <img class="loading-icon" src="img/refresh.png" alt="refresh.png">
-    </section>
-</template>
-
-<template id="main-city">
-    <div class="main-info">
-        <div class="city-here-name" id="geo-city-name"></div>
-        <div class="weather-here-image-and-temperature">
-            <img src="" alt="weather icon" class="weather-icon"/>
-            <span class="temperature-here"></span>
-        </div>
-    </div>
-    <div class="side-info">
-        <div class="side-info-container">
-            <ul>
-                <li class="wind-info">
-                    <span class="key">Wind</span>
-                    <span class="value"></span>
-                </li>
-                <li class="cloudiness-info">
-                    <span class="key">Cloudiness</span>
-                    <span class="value"></span>
-                </li>
-                <li class="pressure-info">
-                    <span class="key">Pressure</span>
-                    <span class="value"></span>
-                </li>
-                <li class="humidity-info">
-                    <span class="key">Humidity</span>
-                    <span class="value"></span>
-                </li>
-                <li class="coordinates-info">
-                    <span class="key">Coordinates</span>
-                    <span class="value"></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</template>
-
-<template id="city">
-    <div class="city-full-data">
-        <div class="city-info-title">
-            <span class="city-name"></span>
-            <span class="temperature"></span>
-            <img src="" alt="weather icon" class="city-weather-icon"/>
-            <button type="button" class="close-button">✕</button>
-        </div>
-        <div class="city-weather-info">
-            <ul>
-                <li class="wind-info">
-                    <span class="key">Wind</span>
-                    <span class="value"></span>
-                </li>
-                <li class="cloudiness-info">
-                    <span class="key">Cloudiness</span>
-                    <span class="value"></span>
-                </li>
-                <li class="pressure-info">
-                    <span class="key">Pressure</span>
-                    <span class="value"></span>
-                </li>
-                <li class="humidity-info">
-                    <span class="key">Humidity</span>
-                    <span class="value"></span>
-                </li>
-                <li class="coordinates-info">
-                    <span class="key">Coordinates</span>
-                    <span class="value"></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</template>
-
-<template id="city-waiting">
-    <div class="city-full-data">
-        <div class="city-info-title">
-            <span class="city-name"></span>
-            <span class="temperature"></span>
-            <button type="button" class="close-button">✕</button>
-        </div>
-        <div class="city-waiting">
-            <div class="waiting-info">Please wait, weather info is loading...</div>
-            <img class="loading-icon" src="img/refresh.png" alt="refresh.png">
-        </div>
-    </div>
-</template>
-
-<script type="text/javascript" src="js/Drawer.js"></script>
-<script type="text/javascript" src="js/FavouritesManager.js"></script>
-<script type="text/javascript" src="js/Helper.js"></script>
-<script type="text/javascript" src="js/WeatherAPI.js"></script>
-<script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
