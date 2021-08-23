@@ -1,7 +1,7 @@
 :root {
     --background-color: #0e1538;
-    --second-color: rgba(200, 200, 200,0.075);
-    --border-color: #040a29;
+    --second-color: rgba(200, 200, 200, 0.075);
+    --buttons-border-color: #040a29;
     --black-color: #333;
     --white-color: rgb(200, 200, 200);
     font-family: Verdana, sans-serif;
@@ -36,6 +36,7 @@ header {
     position: relative;
 }
 
+/*should resize logo pic and delete this*/
 header .logo img {
     max-width: 50%;
     max-height: 30%;
@@ -94,7 +95,7 @@ header .enter-or-register-box a span {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--white-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--buttons-border-color);
     overflow: hidden;
 }
 
@@ -107,4 +108,42 @@ header .enter-or-register-box a span::before {
     height: 100%;
     background: var(--second-color);
     transform: skew(25deg);
+}
+
+header nav {
+    background: var(--second-color);
+    border: 1px solid var(--buttons-border-color);
+    border-radius: 6px;
+    padding: 0.75rem 0.25rem;
+    margin-top: 1rem;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.middle {
+    color: var(--white-color);
+    overflow: auto;
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid var(--white-color);
+    padding-top: 0.5rem;
+    text-align: center;
+    color: var(--white-color);
 }
