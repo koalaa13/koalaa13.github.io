@@ -4,6 +4,7 @@
     --buttons-border-color: #040a29;
     --black-color: #333;
     --white-color: rgb(200, 200, 200);
+    --dark-white-color: rgb(255, 255, 255);
     font-family: Verdana, sans-serif;
     font-size: 16px;
 }
@@ -132,6 +133,25 @@ header nav ul li a {
     text-decoration: none;
     color: var(--white-color);
     text-transform: uppercase;
+    /*this part for text link on hover*/
+    position: relative;
+    display: inline-block;
+}
+
+header nav ul li a::before {
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    color: var(--dark-white-color);
+    overflow: hidden;
+    transition: width 275ms ease;
+    width: 0;
+    white-space: nowrap;
+}
+
+header nav ul li a:hover:before {
+    width: 100%;
 }
 
 .middle {
