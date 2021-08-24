@@ -1,0 +1,42 @@
+header nav {
+    background: var(--second-color);
+    border: 1px solid var(--buttons-border-color);
+    border-radius: 6px;
+    padding: 0.75rem 0.25rem;
+    margin-top: 1rem;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    text-transform: uppercase;
+    /*this part for text link on hover*/
+    position: relative;
+    display: inline-block;
+}
+
+header nav ul li a::before {
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    color: var(--dark-white-color);
+    overflow: hidden;
+    transition: width 275ms ease;
+    width: 0;
+    white-space: nowrap;
+}
+
+header nav ul li a:hover:before {
+    width: 100%;
+}

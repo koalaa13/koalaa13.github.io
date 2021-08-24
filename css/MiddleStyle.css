@@ -1,0 +1,19 @@
+.middle-part1 {
+    margin: 1rem auto;
+    color: var(--white-color);
+    overflow: auto;
+}
+
+.middle-part2 {
+    margin: 1rem auto;
+    color: var(--white-color);
+    overflow: auto;
+}
+
+.with-cache-background {
+    background-image: url("../img/cache_map_img.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

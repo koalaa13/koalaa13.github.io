@@ -15,7 +15,6 @@ body {
 
 html {
     min-width: 600px;
-    max-width: 1280px;
     padding: 1rem;
     margin: 0 auto;
 }
@@ -26,144 +25,8 @@ html {
     }
 }
 
-
 @media (max-width: 800px) {
     :root {
         font-size: 12px;
     }
-}
-
-header {
-    position: relative;
-}
-
-/*should resize logo pic and delete this*/
-header .logo img {
-    max-width: 50%;
-    max-height: 30%;
-}
-
-header .enter-or-register-box {
-    width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-header .enter-or-register-box a {
-    margin-left: 2rem;
-    position: relative;
-    width: 160px;
-    height: 60px;
-    background-color: var(--white-color);
-    display: inline-block;
-}
-
-header .enter-or-register-box a:before,
-header .enter-or-register-box a:after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: #f00;
-    transition: 0.5s;
-    background: linear-gradient(45deg, #ff075b, var(--background-color), var(--background-color), #1faa22);
-}
-
-header .enter-or-register-box a:hover:before {
-    inset: -3px;
-}
-
-header .enter-or-register-box a:hover:after {
-    inset: -3px;
-    filter: blur(10px);
-}
-
-header .enter-or-register-box a span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--background-color);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--white-color);
-    border: 1px solid var(--buttons-border-color);
-    overflow: hidden;
-}
-
-header .enter-or-register-box a span::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 100%;
-    height: 100%;
-    background: var(--second-color);
-    transform: skew(25deg);
-}
-
-header nav {
-    background: var(--second-color);
-    border: 1px solid var(--buttons-border-color);
-    border-radius: 6px;
-    padding: 0.75rem 0.25rem;
-    margin-top: 1rem;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-left: 2rem;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: var(--white-color);
-    text-transform: uppercase;
-    /*this part for text link on hover*/
-    position: relative;
-    display: inline-block;
-}
-
-header nav ul li a::before {
-    position: absolute;
-    content: attr(data-content);
-    top: 0;
-    left: 0;
-    color: var(--dark-white-color);
-    overflow: hidden;
-    transition: width 275ms ease;
-    width: 0;
-    white-space: nowrap;
-}
-
-header nav ul li a:hover:before {
-    width: 100%;
-}
-
-.middle {
-    color: var(--white-color);
-    overflow: auto;
-    margin-top: 1rem;
-}
-
-footer {
-    margin-top: 2rem;
-    border-top: 1px solid var(--white-color);
-    padding-top: 0.5rem;
-    text-align: center;
-    color: var(--white-color);
 }
