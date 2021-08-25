@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .middle-part1 {
-    color: var(--white-color);
+    color: var(--almost-white-color);
     overflow: auto;
 }
 
-.content {
+.content-with-margin {
     margin: 0 10% 0 10%;
+    padding: 0;
 }
 
 .registration-box {
@@ -38,17 +39,16 @@
     position: relative;
     text-align: center;
     color: aliceblue;
-    font: 400 20px "Bebas Neue", Verdana;
+    font: 400 20px var(--header-cursive), Verdana;
 }
 
 .button-sign-in {
     color: whitesmoke;
-    margin: auto;
-    margin-top: 5%;
+    margin: 5% auto auto;
     border-width: 0;
     border-radius: 3px;
     position: relative;
-    font: 400 18px "Bebas Neue", Verdana;
+    font: 400 18px var(--header-cursive), Verdana;
     background-color: #ff075b;
     height: 40px;
     width: 100%;
@@ -62,4 +62,32 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bait-info .tournament-images {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bait-info .title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font: 700 50px var(--header-cursive), Verdana;
+}
+
+.bait-info .tournament-images .tournament-info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.bait-info .tournament-images .tournament-info img {
+    filter: drop-shadow(0 0 4px #4444dd);
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.bait-info .tournament-images .caption {
+    text-align: center;
+    font: 400 25px var(--header-cursive), Verdana;
 }

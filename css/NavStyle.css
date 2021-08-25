@@ -18,7 +18,7 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: var(--white-color);
+    color: var(--almost-white-color);
     text-transform: uppercase;
     /*this part for text link on hover*/
     position: relative;
@@ -30,7 +30,7 @@ header nav ul li a::before {
     content: attr(data-content);
     top: 0;
     left: 0;
-    color: var(--dark-white-color);
+    color: var(--white-color);
     overflow: hidden;
     transition: width 275ms ease;
     width: 0;
