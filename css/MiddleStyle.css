@@ -5,13 +5,6 @@
     overflow: auto;
 }
 
-.middle-part2 {
-    position: relative;
-    top: 90px;
-    color: var(--white-color);
-    overflow: auto;
-}
-
 .content {
     margin: 0 10% 0 10%;
 }
