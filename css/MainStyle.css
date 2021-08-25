@@ -1,5 +1,5 @@
 :root {
-    --background-color: #0e1538;
+    --background-color: #111739;
     --second-color: rgba(200, 200, 200, 0.075);
     --buttons-border-color: #040a29;
     --black-color: #333;
@@ -11,12 +11,29 @@
 
 body {
     background-color: var(--background-color);
+    margin: 0;
 }
 
 html {
     min-width: 600px;
-    padding: 1rem;
     margin: 0 auto;
+}
+
+input.text-field {
+    box-sizing: border-box;
+    height: 44px;
+    width: 100%;
+    outline: none;
+    border-width: 0;
+    border-radius: 3px;
+    text-rendering: auto;
+    text-indent: 0;
+    display: inline-block;
+    text-align: start;
+    padding: 4px 6px;
+    font: 400 24px "Comic Sans MS";
+    color: #bfbfbf;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 1024px) {
