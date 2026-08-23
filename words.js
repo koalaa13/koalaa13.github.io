@@ -6,346 +6,576 @@
    ============================================================ */
 window.VOCAB_WORDS = [
   {
-    word: "to wander", type: "word", pos: "verb", ipa: "/ˈwɒndə/",
-    meaning: "to walk around slowly without a clear direction or purpose",
-    emoji: "🚶", image: null,
-    collocations: ["wander around the city", "wander off", "mind wanders", "wander aimlessly"],
-    examples: [
+    "word": "to wander",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/ˈwɒndə/",
+    "meaning": "to walk around slowly without a clear direction or purpose",
+    "emoji": "🚶",
+    "image": "images/wander.jpg",
+    "collocations": [
+      "wander around the city",
+      "wander off",
+      "mind wanders",
+      "wander aimlessly"
+    ],
+    "examples": [
       "We spent the afternoon wandering around the old town.",
       "Sorry, my mind was wandering — what did you say?",
       "The kid wandered off while his parents weren't looking."
     ],
-    lesson: "demo"
+    "lesson": "demo"
   },
   {
-    word: "reluctant", type: "word", pos: "adjective", ipa: "/rɪˈlʌktənt/",
-    meaning: "unwilling to do something; hesitant",
-    emoji: "😬", image: null,
-    collocations: ["reluctant to do sth", "reluctant admission", "deeply reluctant"],
-    examples: [
+    "word": "reluctant",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/rɪˈlʌktənt/",
+    "meaning": "unwilling to do something; hesitant",
+    "emoji": "😬",
+    "image": "images/reluctant.jpg",
+    "collocations": [
+      "reluctant to do sth",
+      "reluctant admission",
+      "deeply reluctant"
+    ],
+    "examples": [
       "She was reluctant to talk about her past.",
       "He gave a reluctant smile and finally agreed.",
       "Many companies are reluctant to hire juniors."
     ],
-    lesson: "demo"
+    "lesson": "demo"
   },
   {
-    word: "once in a blue moon", type: "idiom", pos: "idiom", ipa: "",
-    meaning: "very rarely, almost never",
-    emoji: "🌕", image: null,
-    collocations: ["happen once in a blue moon"],
-    examples: [
+    "word": "once in a blue moon",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "very rarely, almost never",
+    "emoji": "🌕",
+    "image": null,
+    "collocations": [
+      "happen once in a blue moon"
+    ],
+    "examples": [
       "I eat fast food once in a blue moon — maybe twice a year.",
       "He calls his parents once in a blue moon."
     ],
-    lesson: "demo"
+    "lesson": "demo"
   },
   {
-    word: "to eavesdrop", type: "word", pos: "verb", ipa: "/ˈiːvzdrɒp/",
-    meaning: "to secretly listen to what other people are saying",
-    emoji: "👂", image: null,
-    collocations: ["eavesdrop on a conversation", "eavesdrop on someone", "get caught eavesdropping"],
-    examples: [
+    "word": "to eavesdrop",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/ˈiːvzdrɒp/",
+    "meaning": "to secretly listen to what other people are saying",
+    "emoji": "👂",
+    "image": "images/eavesdrop.jpg",
+    "collocations": [
+      "eavesdrop on a conversation",
+      "eavesdrop on someone",
+      "get caught eavesdropping"
+    ],
+    "examples": [
       "She was eavesdropping on our conversation from the hallway.",
       "I didn't mean to eavesdrop, but I overheard my name.",
       "He got caught eavesdropping on the managers' call."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "deliberately", type: "word", pos: "adverb", ipa: "/dɪˈlɪbərətli/",
-    meaning: "done on purpose, intentionally",
-    emoji: "🎯", image: null,
-    collocations: ["deliberately ignore", "deliberately misleading", "deliberately choose"],
-    examples: [
+    "word": "deliberately",
+    "type": "word",
+    "pos": "adverb",
+    "ipa": "/dɪˈlɪbərətli/",
+    "meaning": "done on purpose, intentionally",
+    "emoji": "🎯",
+    "image": "images/deliberately.jpg",
+    "collocations": [
+      "deliberately ignore",
+      "deliberately misleading",
+      "deliberately choose"
+    ],
+    "examples": [
       "He deliberately ignored my message.",
       "The headline was deliberately misleading.",
       "She deliberately chose the hardest ticket to learn faster."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "boredom", type: "word", pos: "noun", ipa: "/ˈbɔːdəm/",
-    meaning: "the feeling of being bored",
-    emoji: "🥱", image: null,
-    collocations: ["out of boredom", "die of boredom", "relieve boredom"],
-    examples: [
+    "word": "boredom",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈbɔːdəm/",
+    "meaning": "the feeling of being bored",
+    "emoji": "🥱",
+    "image": "images/boredom.jpg",
+    "collocations": [
+      "out of boredom",
+      "die of boredom",
+      "relieve boredom"
+    ],
+    "examples": [
       "I started scrolling my phone out of pure boredom.",
       "She took up painting to relieve the boredom.",
       "The lecture was so dull I was dying of boredom."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to be into sth", type: "phrase", pos: "expression", ipa: "",
-    meaning: "to really like or be interested in something",
-    emoji: "🤩", image: null,
-    collocations: ["be really into sth", "get into sth", "be into music/sports"],
-    examples: [
+    "word": "to be into sth",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "to really like or be interested in something",
+    "emoji": "🤩",
+    "image": null,
+    "collocations": [
+      "be really into sth",
+      "get into sth",
+      "be into music/sports"
+    ],
+    "examples": [
       "I'm really into hiking lately.",
       "I could never get into horror movies.",
       "He's into retro video games."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to be keen on sth", type: "phrase", pos: "expression", ipa: "",
-    meaning: "to like or be enthusiastic about something (common in British English)",
-    emoji: "👍", image: null,
-    collocations: ["keen on doing sth", "not too keen on", "keen to do sth"],
-    examples: [
+    "word": "to be keen on sth",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "to like or be enthusiastic about something (common in British English)",
+    "emoji": "👍",
+    "image": null,
+    "collocations": [
+      "keen on doing sth",
+      "not too keen on",
+      "keen to do sth"
+    ],
+    "examples": [
       "She's keen on cycling to work.",
       "I'm not too keen on his idea, to be honest.",
       "He's always keen to help with code reviews."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to sleep in", type: "phrase", pos: "phrasal verb", ipa: "",
-    meaning: "to sleep longer than usual in the morning",
-    emoji: "😴", image: null,
-    collocations: ["sleep in on weekends", "sleep in late", "sleep in till noon"],
-    examples: [
+    "word": "to sleep in",
+    "type": "phrase",
+    "pos": "phrasal verb",
+    "ipa": "",
+    "meaning": "to sleep longer than usual in the morning",
+    "emoji": "😴",
+    "image": "images/sleep-in.jpg",
+    "collocations": [
+      "sleep in on weekends",
+      "sleep in late",
+      "sleep in till noon"
+    ],
+    "examples": [
       "I love sleeping in on Saturdays.",
       "Sorry I'm late — I slept in.",
       "We slept in till noon after the release."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "drowsy", type: "word", pos: "adjective", ipa: "/ˈdraʊzi/",
-    meaning: "sleepy and not fully awake",
-    emoji: "😪", image: null,
-    collocations: ["feel drowsy", "make you drowsy", "drowsy after lunch"],
-    examples: [
+    "word": "drowsy",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˈdraʊzi/",
+    "meaning": "sleepy and not fully awake",
+    "emoji": "😪",
+    "image": "images/drowsy.jpg",
+    "collocations": [
+      "feel drowsy",
+      "make you drowsy",
+      "drowsy after lunch"
+    ],
+    "examples": [
       "This medicine makes me drowsy.",
       "I always feel drowsy after a big lunch.",
       "He was too drowsy to finish the report."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "sleep-deprived", type: "word", pos: "adjective", ipa: "/ˈsliːp dɪˌpraɪvd/",
-    meaning: "tired because of not getting enough sleep",
-    emoji: "🦉", image: null,
-    collocations: ["sleep-deprived parents", "feel sleep-deprived", "chronically sleep-deprived"],
-    examples: [
+    "word": "sleep-deprived",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˈsliːp dɪˌpraɪvd/",
+    "meaning": "tired because of not getting enough sleep",
+    "emoji": "🦉",
+    "image": "images/sleep-deprived.jpg",
+    "collocations": [
+      "sleep-deprived parents",
+      "feel sleep-deprived",
+      "chronically sleep-deprived"
+    ],
+    "examples": [
       "New parents are permanently sleep-deprived.",
       "I was too sleep-deprived to focus on the code review.",
       "The whole team was sleep-deprived after the night incident."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to turn out", type: "phrase", pos: "phrasal verb", ipa: "",
-    meaning: "to happen or develop in a particular way; to be discovered to be",
-    emoji: "🔄", image: null,
-    collocations: ["turn out well/badly", "turn out to be", "as it turned out"],
-    examples: [
+    "word": "to turn out",
+    "type": "phrase",
+    "pos": "phrasal verb",
+    "ipa": "",
+    "meaning": "to happen or develop in a particular way; to be discovered to be",
+    "emoji": "🔄",
+    "image": "images/turn-out.jpg",
+    "collocations": [
+      "turn out well/badly",
+      "turn out to be",
+      "as it turned out"
+    ],
+    "examples": [
       "The party turned out better than I expected.",
       "As it turned out, the bug was in my own code.",
       "He turned out to be her old classmate."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "lawn", type: "word", pos: "noun", ipa: "/lɔːn/",
-    meaning: "an area of short, cut grass in a garden or park",
-    emoji: "🌱", image: null,
-    collocations: ["mow the lawn", "front lawn", "freshly cut lawn"],
-    examples: [
+    "word": "lawn",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/lɔːn/",
+    "meaning": "an area of short, cut grass in a garden or park",
+    "emoji": "🌱",
+    "image": "images/lawn.jpg",
+    "collocations": [
+      "mow the lawn",
+      "front lawn",
+      "freshly cut lawn"
+    ],
+    "examples": [
       "I mow the lawn every Sunday.",
       "The kids were playing on the front lawn.",
       "Keep off the lawn, please."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "martial arts", type: "word", pos: "noun", ipa: "/ˌmɑːʃəl ˈɑːts/",
-    meaning: "fighting sports such as judo, karate or kung fu",
-    emoji: "🥋", image: null,
-    collocations: ["practice martial arts", "martial arts training", "a black belt in a martial art"],
-    examples: [
+    "word": "martial arts",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˌmɑːʃəl ˈɑːts/",
+    "meaning": "fighting sports such as judo, karate or kung fu",
+    "emoji": "🥋",
+    "image": "images/martial-arts.jpg",
+    "collocations": [
+      "practice martial arts",
+      "martial arts training",
+      "a black belt in a martial art"
+    ],
+    "examples": [
       "He's been practicing martial arts since childhood.",
       "She has a black belt in karate.",
       "I do martial arts twice a week after work."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to overcome a fear", type: "phrase", pos: "collocation", ipa: "",
-    meaning: "to successfully deal with and stop being controlled by a fear",
-    emoji: "💪", image: null,
-    collocations: ["overcome your fear of sth", "overcome obstacles", "overcome difficulties"],
-    examples: [
+    "word": "to overcome a fear",
+    "type": "phrase",
+    "pos": "collocation",
+    "ipa": "",
+    "meaning": "to successfully deal with and stop being controlled by a fear",
+    "emoji": "💪",
+    "image": "images/overcome-a-fear.jpg",
+    "collocations": [
+      "overcome your fear of sth",
+      "overcome obstacles",
+      "overcome difficulties"
+    ],
+    "examples": [
       "She finally overcame her fear of flying.",
       "He overcame his fear of public speaking at the conference.",
       "The team overcame every obstacle and shipped on time."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "in small doses", type: "phrase", pos: "expression", ipa: "",
-    meaning: "in small amounts at a time",
-    emoji: "💊", image: null,
-    collocations: ["take sth in small doses", "enjoy in small doses", "best in small doses"],
-    examples: [
+    "word": "in small doses",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "in small amounts at a time",
+    "emoji": "💊",
+    "image": "images/in-small-doses.jpg",
+    "collocations": [
+      "take sth in small doses",
+      "enjoy in small doses",
+      "best in small doses"
+    ],
+    "examples": [
       "I can only handle his jokes in small doses.",
       "Learn vocabulary in small doses — ten words a day.",
       "Dark chocolate is best enjoyed in small doses."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to pass away", type: "phrase", pos: "phrasal verb", ipa: "",
-    meaning: "to die (a polite, gentle way of saying it)",
-    emoji: "🕊️", image: null,
-    collocations: ["pass away peacefully", "pass away last year", "sadly passed away"],
-    examples: [
+    "word": "to pass away",
+    "type": "phrase",
+    "pos": "phrasal verb",
+    "ipa": "",
+    "meaning": "to die (a polite, gentle way of saying it)",
+    "emoji": "🕊️",
+    "image": "images/pass-away.jpg",
+    "collocations": [
+      "pass away peacefully",
+      "pass away last year",
+      "sadly passed away"
+    ],
+    "examples": [
       "His grandfather passed away last winter.",
       "She passed away peacefully in her sleep."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "stiff", type: "word", pos: "adjective", ipa: "/stɪf/",
-    meaning: "difficult to bend or move; also: sore (muscles) or overly formal",
-    emoji: "🧍", image: null,
-    collocations: ["stiff muscles", "stiff neck", "feel stiff"],
-    examples: [
+    "word": "stiff",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/stɪf/",
+    "meaning": "difficult to bend or move; also: sore (muscles) or overly formal",
+    "emoji": "🧍",
+    "image": "images/stiff.jpg",
+    "collocations": [
+      "stiff muscles",
+      "stiff neck",
+      "feel stiff"
+    ],
+    "examples": [
       "My neck is stiff from sleeping badly.",
       "I feel stiff after sitting at my desk all day.",
       "He gave a stiff, formal handshake."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to reckon", type: "word", pos: "verb", ipa: "/ˈrekən/",
-    meaning: "to think or suppose (informal)",
-    emoji: "🤔", image: null,
-    collocations: ["I reckon (that)…", "do you reckon…?", "reckon on sth"],
-    examples: [
+    "word": "to reckon",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/ˈrekən/",
+    "meaning": "to think or suppose (informal)",
+    "emoji": "🤔",
+    "image": "images/reckon.jpg",
+    "collocations": [
+      "I reckon (that)…",
+      "do you reckon…?",
+      "reckon on sth"
+    ],
+    "examples": [
       "I reckon it'll rain tonight.",
       "I reckon we can finish the sprint by Friday.",
       "Do you reckon she's telling the truth?"
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "I mean", type: "phrase", pos: "expression", ipa: "",
-    meaning: "used to explain, correct or soften what you just said",
-    emoji: "💬", image: null,
-    collocations: ["I mean…", "what do you mean?", "I mean it"],
-    examples: [
+    "word": "I mean",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "used to explain, correct or soften what you just said",
+    "emoji": "💬",
+    "image": "images/i-mean.jpg",
+    "collocations": [
+      "I mean…",
+      "what do you mean?",
+      "I mean it"
+    ],
+    "examples": [
       "It's difficult. I mean, really difficult.",
       "What do you mean, the deploy failed?",
       "I mean it — you're doing great."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "level the playing field", type: "idiom", pos: "idiom", ipa: "",
-    meaning: "to make a situation fair for everyone involved",
-    emoji: "⚖️", image: null,
-    collocations: ["level the playing field for sb", "help level the playing field"],
-    examples: [
+    "word": "level the playing field",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to make a situation fair for everyone involved",
+    "emoji": "⚖️",
+    "image": null,
+    "collocations": [
+      "level the playing field for sb",
+      "help level the playing field"
+    ],
+    "examples": [
       "Free online courses help level the playing field for juniors.",
       "The new rules level the playing field for small companies."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "wholesome", type: "word", pos: "adjective", ipa: "/ˈhəʊlsəm/",
-    meaning: "good, kind and heartwarming; good for your health or character",
-    emoji: "🥰", image: null,
-    collocations: ["wholesome content", "wholesome food", "wholesome family movie"],
-    examples: [
+    "word": "wholesome",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˈhəʊlsəm/",
+    "meaning": "good, kind and heartwarming; good for your health or character",
+    "emoji": "🥰",
+    "image": "images/wholesome.jpg",
+    "collocations": [
+      "wholesome content",
+      "wholesome food",
+      "wholesome family movie"
+    ],
+    "examples": [
       "That video of a dog meeting a baby is so wholesome.",
       "They serve simple, wholesome food.",
       "It's a wholesome show the whole family can watch."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to meet the needs of", type: "phrase", pos: "collocation", ipa: "",
-    meaning: "to satisfy what a person or group needs",
-    emoji: "🤝", image: null,
-    collocations: ["meet the needs of customers", "meet someone's needs", "meet a demand/requirement"],
-    examples: [
+    "word": "to meet the needs of",
+    "type": "phrase",
+    "pos": "collocation",
+    "ipa": "",
+    "meaning": "to satisfy what a person or group needs",
+    "emoji": "🤝",
+    "image": "images/meet-the-needs-of.jpg",
+    "collocations": [
+      "meet the needs of customers",
+      "meet someone's needs",
+      "meet a demand/requirement"
+    ],
+    "examples": [
       "The app meets the needs of small businesses.",
       "This course meets the needs of busy professionals.",
       "We redesigned the API to meet customer demand."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "to fulfill", type: "word", pos: "verb", ipa: "/fʊlˈfɪl/",
-    meaning: "to do what you promised, or to achieve what was hoped for",
-    emoji: "✅", image: null,
-    collocations: ["fulfill a promise", "fulfill a dream", "fulfill requirements"],
-    examples: [
+    "word": "to fulfill",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/fʊlˈfɪl/",
+    "meaning": "to do what you promised, or to achieve what was hoped for",
+    "emoji": "✅",
+    "image": "images/fulfill.jpg",
+    "collocations": [
+      "fulfill a promise",
+      "fulfill a dream",
+      "fulfill requirements"
+    ],
+    "examples": [
       "He finally fulfilled his dream of moving abroad.",
       "The candidate fulfilled all the requirements.",
       "She fulfilled her promise and shipped the feature on time."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "pull sth out of thin air", type: "idiom", pos: "idiom", ipa: "",
-    meaning: "to invent a number, idea or excuse from nowhere",
-    emoji: "🎩", image: null,
-    collocations: ["pull a number out of thin air", "pull an excuse out of thin air", "seem pulled out of thin air"],
-    examples: [
+    "word": "pull sth out of thin air",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to invent a number, idea or excuse from nowhere",
+    "emoji": "🎩",
+    "image": null,
+    "collocations": [
+      "pull a number out of thin air",
+      "pull an excuse out of thin air",
+      "seem pulled out of thin air"
+    ],
+    "examples": [
       "That estimate? I pulled it out of thin air.",
       "He pulled an excuse out of thin air.",
       "These statistics seem pulled out of thin air."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "rubble", type: "word", pos: "noun", ipa: "/ˈrʌbəl/",
-    meaning: "broken pieces of stone and brick from a destroyed building",
-    emoji: "🧱", image: null,
-    collocations: ["a pile of rubble", "reduced to rubble", "dig through the rubble"],
-    examples: [
+    "word": "rubble",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈrʌbəl/",
+    "meaning": "broken pieces of stone and brick from a destroyed building",
+    "emoji": "🧱",
+    "image": "images/rubble.jpg",
+    "collocations": [
+      "a pile of rubble",
+      "reduced to rubble",
+      "dig through the rubble"
+    ],
+    "examples": [
       "The old building was reduced to rubble.",
       "Rescuers dug through the rubble all night."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "DIY (do it yourself)", type: "word", pos: "noun", ipa: "/ˌdiː aɪ ˈwaɪ/",
-    meaning: "making or repairing things yourself instead of hiring someone",
-    emoji: "🔨", image: null,
-    collocations: ["DIY project", "DIY repair", "DIY tutorial"],
-    examples: [
+    "word": "DIY (do it yourself)",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˌdiː aɪ ˈwaɪ/",
+    "meaning": "making or repairing things yourself instead of hiring someone",
+    "emoji": "🔨",
+    "image": "images/diy-do-it-yourself.jpg",
+    "collocations": [
+      "DIY project",
+      "DIY repair",
+      "DIY tutorial"
+    ],
+    "examples": [
       "I built this desk as a DIY project.",
       "He's really into DIY — he fixed the sink himself.",
       "There are DIY tutorials for everything on YouTube."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "cooker", type: "word", pos: "noun", ipa: "/ˈkʊkə/",
-    meaning: "BrE: a large kitchen appliance for cooking (AmE: stove); the baking part alone is the oven",
-    emoji: "🍳", image: null,
-    collocations: ["gas cooker", "electric cooker", "turn on the cooker"],
-    examples: [
+    "word": "cooker",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈkʊkə/",
+    "meaning": "BrE: a large kitchen appliance for cooking (AmE: stove); the baking part alone is the oven",
+    "emoji": "🍳",
+    "image": "images/cooker.jpg",
+    "collocations": [
+      "gas cooker",
+      "electric cooker",
+      "turn on the cooker"
+    ],
+    "examples": [
       "The cooker is broken, so we're ordering in.",
       "She bought a new gas cooker for the kitchen."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   },
   {
-    word: "float to the surface", type: "phrase", pos: "expression", ipa: "",
-    meaning: "to rise to the top of a liquid; also: (of problems or feelings) to become known",
-    emoji: "🫧", image: null,
-    collocations: ["float to the surface", "rise to the surface", "come to the surface"],
-    examples: [
+    "word": "float to the surface",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "to rise to the top of a liquid; also: (of problems or feelings) to become known",
+    "emoji": "🫧",
+    "image": "images/float-to-the-surface.jpg",
+    "collocations": [
+      "float to the surface",
+      "rise to the surface",
+      "come to the surface"
+    ],
+    "examples": [
       "Oil floats to the surface of water.",
       "Old tensions floated to the surface during the retro.",
       "Air bubbles slowly floated to the surface."
     ],
-    lesson: "2026-08-23"
+    "lesson": "2026-08-23"
   }
 ];
