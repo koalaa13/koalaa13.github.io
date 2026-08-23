@@ -1,87 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CsGoTeammates</title>
-    <link rel="stylesheet" type="text/css" href="css/EnterOrRegisterStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/FooterStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/MiddleStyle.css">
-    <link rel="stylesheet" type="text/css" href="css/MainStyle.css">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Vocabulary Dashboard</title>
+<style>
+  :root {
+    --bg: #0f172a; --card: #1e293b; --card2: #273549; --text: #e2e8f0;
+    --muted: #94a3b8; --accent: #38bdf8; --green: #4ade80; --red: #f87171;
+    --yellow: #facc15;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, sans-serif; min-height: 100vh; }
+  header { padding: 24px 32px 12px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+  h1 { font-size: 1.4rem; font-weight: 700; }
+  h1 span { color: var(--accent); }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; }
+  .controls button, .controls select, .controls input {
+    background: var(--card); color: var(--text); border: 1px solid #334155;
+    border-radius: 8px; padding: 8px 14px; font-size: 0.9rem; cursor: pointer;
+  }
+  .controls input { cursor: text; min-width: 140px; }
+  .controls button.active { background: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 600; }
+  .controls button:hover:not(.active) { border-color: var(--accent); }
+  #progress-wrap { padding: 0 32px 16px; }
+  #progress-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 6px; }
+  #progress-bar { height: 8px; background: var(--card); border-radius: 4px; overflow: hidden; }
+  #progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--green)); width: 0%; transition: width .4s; }
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 20px; padding: 8px 32px 40px; }
+  @media (max-width: 600px) {
+    header { padding: 16px 16px 8px; }
+    #progress-wrap { padding: 0 16px 12px; }
+    #grid { grid-template-columns: 1fr; gap: 16px; padding: 8px 16px 32px; }
+    .card { height: 400px; }
+    #quiz-view { padding: 0 12px 32px; }
+  }
+  .card { perspective: 1200px; height: 420px; cursor: pointer; }
+  .card-inner { position: relative; width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; }
+  .card.flipped .card-inner { transform: rotateY(180deg); }
+  .face { position: absolute; inset: 0; backface-visibility: hidden; background: var(--card); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; border: 1px solid #334155; overflow: hidden; }
+  .face.back { transform: rotateY(180deg); background: var(--card2); overflow-y: auto; }
+  .img-wrap { position: relative; height: 170px; border-radius: 10px; overflow: hidden; margin-bottom: 12px; background: linear-gradient(135deg, #1e3a5f, #0b1220); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .img-wrap .emoji { font-size: 4.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,.4)); }
+  .img-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .word-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .word { font-size: 1.5rem; font-weight: 700; }
+  .pos { color: var(--yellow); font-style: italic; font-size: 0.9rem; }
+  .ipa { color: var(--muted); font-size: 0.9rem; }
+  .speak { background: none; border: none; cursor: pointer; font-size: 1.1rem; padding: 2px 6px; border-radius: 6px; }
+  .speak:hover { background: #334155; }
+  .meaning { margin-top: 8px; color: var(--text); font-size: 0.95rem; line-height: 1.4; }
+  .hint { margin-top: auto; color: var(--muted); font-size: 0.75rem; text-align: center; padding-top: 10px; }
+  .section-title { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 4px; }
+  .colloc { display: inline-block; background: #0b1220; border: 1px solid #334155; border-radius: 20px; padding: 3px 10px; margin: 2px 4px 2px 0; font-size: 0.82rem; }
+  .ex { font-size: 0.88rem; line-height: 1.45; margin-bottom: 6px; color: var(--text); }
+  .ex b { color: var(--accent); }
+  .status-row { display: flex; gap: 8px; margin-top: 14px; }
+  .status-btn { flex: 1; border: none; border-radius: 8px; padding: 8px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+  .btn-know { background: #14532d; color: var(--green); }
+  .btn-dont { background: #450a0a; color: var(--red); }
+  .btn-know:hover { background: #166534; } .btn-dont:hover { background: #7f1d1d; }
+  .btn-del { display: block; width: 100%; margin-top: 8px; background: none; border: 1px solid #7f1d1d; color: var(--red); border-radius: 8px; padding: 6px; font-size: 0.78rem; cursor: pointer; }
+  .btn-del:hover { background: #450a0a; }
+  .badge { position: absolute; top: 10px; right: 10px; font-size: 0.7rem; padding: 3px 8px; border-radius: 20px; font-weight: 700; z-index: 2; }
+  .badge.new { background: var(--yellow); color: #0f172a; }
+  .badge.learning { background: var(--accent); color: #0f172a; }
+  .badge.learned { background: var(--green); color: #0f172a; }
+  .type-tag { position: absolute; top: 10px; left: 10px; font-size: 0.68rem; padding: 3px 8px; border-radius: 20px; background: rgba(15,23,42,.75); color: var(--muted); z-index: 2; text-transform: uppercase; letter-spacing: 1px; }
+  .lesson-tag { color: var(--muted); font-size: 0.75rem; margin-top: 6px; }
+  #quiz-view { display: none; max-width: 560px; margin: 20px auto; padding: 0 20px 40px; }
+  #quiz-card { background: var(--card); border: 1px solid #334155; border-radius: 16px; padding: 32px; text-align: center; }
+  #quiz-prompt { font-size: 2.2rem; margin-bottom: 8px; }
+  #quiz-sub { color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+  #quiz-answer { display: none; margin: 16px 0; font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+  #quiz-btns { display: flex; gap: 10px; justify-content: center; margin-top: 16px; }
+  #quiz-btns button { border: none; border-radius: 8px; padding: 10px 22px; font-size: 0.95rem; font-weight: 600; cursor: pointer; }
+  #quiz-show { background: var(--accent); color: #0f172a; }
+  #quiz-count { color: var(--muted); font-size: 0.8rem; margin-top: 18px; }
+  .hidden { display: none !important; }
+  #sync-status { font-size: 0.75rem; color: var(--muted); display: inline-flex; align-items: center; gap: 5px; }
+  #sync-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+  #sync-status.synced::before { background: var(--green); }
+  #sync-status.syncing::before { background: var(--yellow); }
+  #sync-status.offline::before { background: var(--red); }
+</style>
 </head>
 <body>
-<div class="with-cache-background">
-    <header>
-        <a class="logo" href="#">
-            <img src="img/logo.png" alt="CsGoTeammates">
-        </a>
-        <div class="enter-or-register-box">
-            <a href="#">
-                <span>Log In</span>
-            </a>
-            <a href="#">
-                <span>Register</span>
-            </a>
-        </div>
-    </header>
-    <div class="content-with-margin">
-        <div class="main-info">
-            <div class="main-title">
-                Eeh bilo chetvero, chetire muzhika.
-            </div>
-            <br>
-            <div class="second-info-title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, similique!
-            </div>
-            <div class="features">
-                <div class="feature">
-                    <img src="img/favicon.png" alt="muszhik" class="feature-icon">
-                    <h1>Lorem ipsum dolor sit amet.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="feature">
-                    <img src="img/favicon.png" alt="muszhik" class="feature-icon">
-                    <h1>Lorem ipsum dolor sit.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="feature">
-                    <img src="img/favicon.png" alt="muszhik" class="feature-icon">
-                    <h1>Lorem ipsum dolor.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                <div class="feature">
-                    <img src="img/favicon.png" alt="muszhik" class="feature-icon">
-                    <h1>Lorem ipsum dolor sit.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+<header>
+  <h1>📚 Vocabulary <span>Dashboard</span></h1>
+  <div class="controls">
+    <input id="search" type="text" placeholder="Search…">
+    <select id="lesson-filter"><option value="">All lessons</option></select>
+    <select id="type-filter">
+      <option value="">All types</option>
+      <option value="word">Words</option>
+      <option value="phrase">Phrases</option>
+      <option value="idiom">Idioms</option>
+    </select>
+    <button data-status="" class="active">All</button>
+    <button data-status="new">New</button>
+    <button data-status="learning">Learning</button>
+    <button data-status="learned">Learned</button>
+    <button id="quiz-toggle">▶ Quiz me</button>
+    <span id="sync-status" title="Sync status"></span>
+  </div>
+</header>
+
+<div id="progress-wrap">
+  <div id="progress-label"></div>
+  <div id="progress-bar"><div id="progress-fill"></div></div>
 </div>
-<div class="content-with-margin">
-    <div class="features-info"></div>
-    <div class="bait-info">
-        <div class="title">
-            Become part of it.
-        </div>
-        <div class="tournament-images">
-            <div class="tournament-info">
-                <img src="img/IEM_Katowice.png" alt="IEM-Katowice">
-                <div class="caption">Lorem ipsum.</div>
-            </div>
-            <div class="tournament-info">
-                <img src="img/IEM_Katowice.png" alt="IEM-Katowice">
-                <div class="caption">Lorem ipsum.</div>
-            </div>
-            <div class="tournament-info">
-                <img src="img/IEM_Katowice.png" alt="IEM-Katowice">
-                <div class="caption">Lorem ipsum.</div>
-            </div>
-        </div>
+
+<div id="grid"></div>
+
+<div id="quiz-view">
+  <div id="quiz-card">
+    <div id="quiz-prompt"></div>
+    <div id="quiz-sub"></div>
+    <div id="quiz-answer"></div>
+    <div id="quiz-btns">
+      <button id="quiz-show">Show answer</button>
+      <button class="btn-dont status-btn hidden" id="quiz-no">Still learning</button>
+      <button class="btn-know status-btn hidden" id="quiz-yes">I know it</button>
     </div>
+    <div id="quiz-count"></div>
+  </div>
 </div>
-<footer>
-    <a href="#">CsGoTeammates</a> &copy; 2021 by koala13
-</footer>
+
+<script src="words.js"></script>
+<script>
+/* Word data lives in words.js — generated by Claude from new-words.txt */
+const WORDS = window.VOCAB_WORDS || [];
+
+/* ============ CLOUD SYNC (Supabase) ============
+   Fill in url + key once your Supabase project exists.
+   Leave them empty and the app works local-only, as before. */
+const SYNC = {
+  url: "",          // e.g. "https://abcdefghijkl.supabase.co"
+  key: "",          // "anon" / "public" key from Settings → API
+  table: "vocab_store",
+  rowId: "main"
+};
+/* =============================================== */
+
+const LS_PROGRESS = "vocab-progress-v1";
+let progress = JSON.parse(localStorage.getItem(LS_PROGRESS) || "{}");
+let statusFilter = "", searchTerm = "", lessonFilter = "", typeFilter = "";
+let quizMode = false, quizQueue = [], quizCurrent = null;
+
+const grid = document.getElementById("grid");
+const quizView = document.getElementById("quiz-view");
+
+function syncEnabled() { return Boolean(SYNC.url && SYNC.key); }
+function setSyncStatus(s) {
+  const el = document.getElementById("sync-status");
+  el.className = s;
+  el.textContent = { synced: "synced", syncing: "syncing…", offline: "offline — saved locally" }[s] || "";
+}
+async function remoteLoad() {
+  const r = await fetch(`${SYNC.url}/rest/v1/${SYNC.table}?id=eq.${SYNC.rowId}&select=data`, {
+    headers: { apikey: SYNC.key, Authorization: `Bearer ${SYNC.key}` }
+  });
+  if (!r.ok) throw new Error("load failed");
+  const rows = await r.json();
+  return rows.length ? rows[0].data : null;
+}
+async function remoteSave() {
+  const r = await fetch(`${SYNC.url}/rest/v1/${SYNC.table}`, {
+    method: "POST",
+    headers: {
+      apikey: SYNC.key, Authorization: `Bearer ${SYNC.key}`,
+      "Content-Type": "application/json",
+      Prefer: "resolution=merge-duplicates"
+    },
+    body: JSON.stringify({ id: SYNC.rowId, data: { progress }, updated_at: new Date().toISOString() })
+  });
+  if (!r.ok) throw new Error("save failed");
+}
+let pushTimer = null;
+function schedulePush() {
+  if (!syncEnabled()) return;
+  setSyncStatus("syncing");
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(async () => {
+    try { await remoteSave(); setSyncStatus("synced"); }
+    catch { setSyncStatus("offline"); }
+  }, 800);
+}
+
+function allWords() { return WORDS; }
+function saveProgress() { localStorage.setItem(LS_PROGRESS, JSON.stringify(progress)); schedulePush(); }
+function statusOf(w) { return progress[w.word] || "new"; }
+function setStatus(w, s) { progress[w.word] = s; saveProgress(); updateProgress(); }
+function esc(s) {
+  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function escRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+function boldExample(example, word) {
+  let e = esc(example);
+  const base = esc(word.replace(/^to /, ""));
+  const stem = base.length > 4 ? base.slice(0, -1) : base; // rough stem: "wandering" matches "wander"
+  const m = e.match(new RegExp(escRegex(base) + "\\w*", "i")) ||
+            e.match(new RegExp(escRegex(stem) + "\\w*", "i"));
+  if (m) e = e.replace(m[0], "<b>" + m[0] + "</b>");
+  return e;
+}
+function speak(text) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "en-US"; u.rate = 0.95;
+  speechSynthesis.speak(u);
+}
+
+function updateProgress() {
+  const all = allWords();
+  const learned = all.filter(w => statusOf(w) === "learned").length;
+  const learning = all.filter(w => statusOf(w) === "learning").length;
+  document.getElementById("progress-fill").style.width = (all.length ? learned / all.length * 100 : 0) + "%";
+  document.getElementById("progress-label").textContent =
+    `${learned}/${all.length} learned · ${learning} in progress · ${all.length - learned - learning} new`;
+}
+
+function renderLessons() {
+  const sel = document.getElementById("lesson-filter");
+  const cur = sel.value;
+  const lessons = [...new Set(allWords().map(w => w.lesson))].sort().reverse();
+  sel.innerHTML = '<option value="">All lessons</option>' +
+    lessons.map(l => `<option value="${esc(l)}">${esc(l)}</option>`).join("");
+  sel.value = cur;
+}
+
+function filtered() {
+  return allWords().filter(w =>
+    (!statusFilter || statusOf(w) === statusFilter) &&
+    (!lessonFilter || w.lesson === lessonFilter) &&
+    (!typeFilter || (w.type || "word") === typeFilter) &&
+    (!searchTerm || w.word.toLowerCase().includes(searchTerm))
+  );
+}
+
+function cardHTML(w) {
+  const st = statusOf(w);
+  return `
+  <div class="card" data-word="${esc(w.word)}">
+    <div class="card-inner">
+      <div class="face front">
+        <span class="type-tag">${esc(w.type || "word")}</span>
+        <span class="badge ${st}">${st}</span>
+        <div class="img-wrap">
+          <span class="emoji">${w.emoji || "📝"}</span>
+          ${w.image ? `<img src="${esc(w.image)}" alt="${esc(w.word)}" loading="lazy" onerror="this.remove()">` : ""}
+        </div>
+        <div class="word-row">
+          <span class="word">${esc(w.word)}</span>
+          <button class="speak" data-speak="${esc(w.word)}" title="Listen">🔊</button>
+        </div>
+        <span class="pos">${esc(w.pos || "")}</span> <span class="ipa">${esc(w.ipa || "")}</span>
+        <p class="meaning">${esc(w.meaning)}</p>
+        <div class="lesson-tag">Lesson: ${esc(w.lesson)}</div>
+        <div class="hint">tap to flip →</div>
+      </div>
+      <div class="face back">
+        <div class="section-title">Collocations</div>
+        <div>${(w.collocations || []).map(c => `<span class="colloc">${esc(c)}</span>`).join("") || '<span style="color:var(--muted);font-size:.85rem">—</span>'}</div>
+        <div class="section-title">Examples</div>
+        ${(w.examples || []).map(e => `<p class="ex">• ${boldExample(e, w.word)}</p>`).join("") || '<span style="color:var(--muted);font-size:.85rem">—</span>'}
+        <div class="status-row">
+          <button class="status-btn btn-dont" data-action="learning">Still learning</button>
+          <button class="status-btn btn-know" data-action="learned">I know it ✓</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderGrid() {
+  grid.innerHTML = filtered().map(cardHTML).join("") ||
+    `<p style="color:var(--muted)">No words match the filters. Add words to new-words.txt and ask Claude to generate cards!</p>`;
+}
+
+grid.addEventListener("click", e => {
+  const speakBtn = e.target.closest("[data-speak]");
+  if (speakBtn) { e.stopPropagation(); speak(speakBtn.dataset.speak.replace(/^to /, "")); return; }
+  const actionBtn = e.target.closest("[data-action]");
+  const card = e.target.closest(".card");
+  if (!card) return;
+  const word = card.dataset.word;
+  if (actionBtn) {
+    e.stopPropagation();
+    const w = allWords().find(x => x.word === word);
+    setStatus(w, actionBtn.dataset.action);
+    renderGrid();
+    const re = [...grid.children].find(c => c.dataset.word === word);
+    if (re) re.classList.add("flipped");
+    return;
+  }
+  card.classList.toggle("flipped");
+});
+
+/* ---------- quiz mode ---------- */
+function startQuiz() {
+  quizMode = true;
+  grid.classList.add("hidden");
+  quizView.style.display = "block";
+  document.getElementById("quiz-toggle").textContent = "✕ Exit quiz";
+  const pool = filtered();
+  const weak = pool.filter(w => statusOf(w) !== "learned");
+  quizQueue = (weak.length ? weak : pool).sort(() => Math.random() - 0.5);
+  nextQuiz();
+}
+function nextQuiz() {
+  quizCurrent = quizQueue.shift();
+  if (!quizCurrent) { endQuiz("🎉 Done! All cards reviewed."); return; }
+  document.getElementById("quiz-prompt").textContent = quizCurrent.emoji || "📝";
+  document.getElementById("quiz-sub").innerHTML =
+    `<i>${esc(quizCurrent.pos || quizCurrent.type || "")}</i> — ${esc(quizCurrent.meaning)}`;
+  const ans = document.getElementById("quiz-answer");
+  ans.style.display = "none";
+  ans.innerHTML = `${esc(quizCurrent.word)} <button class="speak" onclick="speak('${esc(quizCurrent.word).replace(/^to /,"")}')">🔊</button>`;
+  document.getElementById("quiz-show").classList.remove("hidden");
+  document.getElementById("quiz-yes").classList.add("hidden");
+  document.getElementById("quiz-no").classList.add("hidden");
+  document.getElementById("quiz-count").textContent = `${quizQueue.length + 1} card(s) to go`;
+}
+function endQuiz(msg) {
+  document.getElementById("quiz-prompt").textContent = msg;
+  document.getElementById("quiz-sub").textContent = "";
+  document.getElementById("quiz-answer").style.display = "none";
+  document.getElementById("quiz-btns").style.display = "none";
+  document.getElementById("quiz-count").textContent = "";
+}
+function exitQuiz() {
+  quizMode = false;
+  quizView.style.display = "none";
+  document.getElementById("quiz-btns").style.display = "flex";
+  grid.classList.remove("hidden");
+  document.getElementById("quiz-toggle").textContent = "▶ Quiz me";
+  renderGrid();
+}
+
+document.getElementById("quiz-show").onclick = () => {
+  document.getElementById("quiz-answer").style.display = "block";
+  document.getElementById("quiz-show").classList.add("hidden");
+  document.getElementById("quiz-yes").classList.remove("hidden");
+  document.getElementById("quiz-no").classList.remove("hidden");
+};
+document.getElementById("quiz-yes").onclick = () => { setStatus(quizCurrent, "learned"); nextQuiz(); };
+document.getElementById("quiz-no").onclick = () => { setStatus(quizCurrent, "learning"); quizQueue.push(quizCurrent); nextQuiz(); };
+document.getElementById("quiz-toggle").onclick = () => quizMode ? exitQuiz() : startQuiz();
+
+/* ---------- filters ---------- */
+document.getElementById("search").oninput = e => { searchTerm = e.target.value.trim().toLowerCase(); renderGrid(); };
+document.getElementById("lesson-filter").onchange = e => { lessonFilter = e.target.value; renderGrid(); };
+document.getElementById("type-filter").onchange = e => { typeFilter = e.target.value; renderGrid(); };
+document.querySelectorAll("[data-status]").forEach(b => b.onclick = () => {
+  document.querySelectorAll("[data-status]").forEach(x => x.classList.remove("active"));
+  b.classList.add("active");
+  statusFilter = b.dataset.status;
+  renderGrid();
+});
+
+async function init() {
+  if (syncEnabled()) {
+    setSyncStatus("syncing");
+    try {
+      const remote = await remoteLoad();
+      if (remote && remote.progress && typeof remote.progress === "object") {
+        progress = remote.progress;
+        localStorage.setItem(LS_PROGRESS, JSON.stringify(progress));
+      }
+      setSyncStatus("synced");
+    } catch { setSyncStatus("offline"); }
+  }
+  renderLessons();
+  renderGrid();
+  updateProgress();
+}
+init();
+</script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+# Add new words/phrases/idioms here — ONE PER LINE.
+# Format:   word or phrase | lesson date (optional, YYYY-MM-DD)
+# Lines starting with # are ignored. Empty lines are ignored.
+#
+# Example:
+#   to put off | 2026-08-23
+#   once in a while | 2026-08-23
+#   daunting
+#
+# When done, tell Claude: "generate cards for new words"
+# Claude will create full cards (meaning, collocations, examples,
+# emoji, IPA) in words.js and clear the processed lines from here.
+
