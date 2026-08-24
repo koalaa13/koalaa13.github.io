@@ -119,4 +119,6 @@ Supabase chosen instead.
 - [x] First real word batch (26 cards, 2026-08-23)
 - [ ] Decision: progress is per-device (localStorage) — user chose
       phone-as-main-device; Supabase sync code remains but disabled
-- [ ] Optionally: real photos per word (local files in an `images/` folder)
+- [ ] Optionally: real photos per word — TRIED 2026-08-23 (Openverse, CC images)
+      and rejected: too many irrelevant results for abstract words; emoji-only
+      is the final visual system
