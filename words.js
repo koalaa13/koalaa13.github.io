@@ -12,7 +12,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈwɒndə/",
     "meaning": "to walk around slowly without a clear direction or purpose",
     "emoji": "🚶",
-    "image": "images/wander.jpg",
+    "image": null,
     "collocations": [
       "wander around the city",
       "wander off",
@@ -33,7 +33,7 @@ window.VOCAB_WORDS = [
     "ipa": "/rɪˈlʌktənt/",
     "meaning": "unwilling to do something; hesitant",
     "emoji": "😬",
-    "image": "images/reluctant.jpg",
+    "image": null,
     "collocations": [
       "reluctant to do sth",
       "reluctant admission",
@@ -70,7 +70,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈiːvzdrɒp/",
     "meaning": "to secretly listen to what other people are saying",
     "emoji": "👂",
-    "image": "images/eavesdrop.jpg",
+    "image": null,
     "collocations": [
       "eavesdrop on a conversation",
       "eavesdrop on someone",
@@ -90,7 +90,7 @@ window.VOCAB_WORDS = [
     "ipa": "/dɪˈlɪbərətli/",
     "meaning": "done on purpose, intentionally",
     "emoji": "🎯",
-    "image": "images/deliberately.jpg",
+    "image": null,
     "collocations": [
       "deliberately ignore",
       "deliberately misleading",
@@ -110,7 +110,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈbɔːdəm/",
     "meaning": "the feeling of being bored",
     "emoji": "🥱",
-    "image": "images/boredom.jpg",
+    "image": null,
     "collocations": [
       "out of boredom",
       "die of boredom",
@@ -170,7 +170,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "to sleep longer than usual in the morning",
     "emoji": "😴",
-    "image": "images/sleep-in.jpg",
+    "image": null,
     "collocations": [
       "sleep in on weekends",
       "sleep in late",
@@ -190,7 +190,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈdraʊzi/",
     "meaning": "sleepy and not fully awake",
     "emoji": "😪",
-    "image": "images/drowsy.jpg",
+    "image": null,
     "collocations": [
       "feel drowsy",
       "make you drowsy",
@@ -210,7 +210,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈsliːp dɪˌpraɪvd/",
     "meaning": "tired because of not getting enough sleep",
     "emoji": "🦉",
-    "image": "images/sleep-deprived.jpg",
+    "image": null,
     "collocations": [
       "sleep-deprived parents",
       "feel sleep-deprived",
@@ -230,7 +230,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "to happen or develop in a particular way; to be discovered to be",
     "emoji": "🔄",
-    "image": "images/turn-out.jpg",
+    "image": null,
     "collocations": [
       "turn out well/badly",
       "turn out to be",
@@ -250,7 +250,7 @@ window.VOCAB_WORDS = [
     "ipa": "/lɔːn/",
     "meaning": "an area of short, cut grass in a garden or park",
     "emoji": "🌱",
-    "image": "images/lawn.jpg",
+    "image": null,
     "collocations": [
       "mow the lawn",
       "front lawn",
@@ -270,7 +270,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˌmɑːʃəl ˈɑːts/",
     "meaning": "fighting sports such as judo, karate or kung fu",
     "emoji": "🥋",
-    "image": "images/martial-arts.jpg",
+    "image": null,
     "collocations": [
       "practice martial arts",
       "martial arts training",
@@ -290,7 +290,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "to successfully deal with and stop being controlled by a fear",
     "emoji": "💪",
-    "image": "images/overcome-a-fear.jpg",
+    "image": null,
     "collocations": [
       "overcome your fear of sth",
       "overcome obstacles",
@@ -310,7 +310,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "in small amounts at a time",
     "emoji": "💊",
-    "image": "images/in-small-doses.jpg",
+    "image": null,
     "collocations": [
       "take sth in small doses",
       "enjoy in small doses",
@@ -330,7 +330,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "to die (a polite, gentle way of saying it)",
     "emoji": "🕊️",
-    "image": "images/pass-away.jpg",
+    "image": null,
     "collocations": [
       "pass away peacefully",
       "pass away last year",
@@ -349,7 +349,7 @@ window.VOCAB_WORDS = [
     "ipa": "/stɪf/",
     "meaning": "difficult to bend or move; also: sore (muscles) or overly formal",
     "emoji": "🧍",
-    "image": "images/stiff.jpg",
+    "image": null,
     "collocations": [
       "stiff muscles",
       "stiff neck",
@@ -369,7 +369,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈrekən/",
     "meaning": "to think or suppose (informal)",
     "emoji": "🤔",
-    "image": "images/reckon.jpg",
+    "image": null,
     "collocations": [
       "I reckon (that)…",
       "do you reckon…?",
@@ -389,7 +389,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "used to explain, correct or soften what you just said",
     "emoji": "💬",
-    "image": "images/i-mean.jpg",
+    "image": null,
     "collocations": [
       "I mean…",
       "what do you mean?",
@@ -427,7 +427,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈhəʊlsəm/",
     "meaning": "good, kind and heartwarming; good for your health or character",
     "emoji": "🥰",
-    "image": "images/wholesome.jpg",
+    "image": null,
     "collocations": [
       "wholesome content",
       "wholesome food",
@@ -447,7 +447,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "to satisfy what a person or group needs",
     "emoji": "🤝",
-    "image": "images/meet-the-needs-of.jpg",
+    "image": null,
     "collocations": [
       "meet the needs of customers",
       "meet someone's needs",
@@ -467,7 +467,7 @@ window.VOCAB_WORDS = [
     "ipa": "/fʊlˈfɪl/",
     "meaning": "to do what you promised, or to achieve what was hoped for",
     "emoji": "✅",
-    "image": "images/fulfill.jpg",
+    "image": null,
     "collocations": [
       "fulfill a promise",
       "fulfill a dream",
@@ -507,7 +507,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈrʌbəl/",
     "meaning": "broken pieces of stone and brick from a destroyed building",
     "emoji": "🧱",
-    "image": "images/rubble.jpg",
+    "image": null,
     "collocations": [
       "a pile of rubble",
       "reduced to rubble",
@@ -526,7 +526,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˌdiː aɪ ˈwaɪ/",
     "meaning": "making or repairing things yourself instead of hiring someone",
     "emoji": "🔨",
-    "image": "images/diy-do-it-yourself.jpg",
+    "image": null,
     "collocations": [
       "DIY project",
       "DIY repair",
@@ -546,7 +546,7 @@ window.VOCAB_WORDS = [
     "ipa": "/ˈkʊkə/",
     "meaning": "BrE: a large kitchen appliance for cooking (AmE: stove); the baking part alone is the oven",
     "emoji": "🍳",
-    "image": "images/cooker.jpg",
+    "image": null,
     "collocations": [
       "gas cooker",
       "electric cooker",
@@ -565,7 +565,7 @@ window.VOCAB_WORDS = [
     "ipa": "",
     "meaning": "to rise to the top of a liquid; also: (of problems or feelings) to become known",
     "emoji": "🫧",
-    "image": "images/float-to-the-surface.jpg",
+    "image": null,
     "collocations": [
       "float to the surface",
       "rise to the surface",

@@ -87,14 +87,21 @@ create policy "anon access" on vocab_store
   read/edit the vocab list (low stakes — keep the URL private)
 - Export occasionally as an independent backup
 
-## Hosting (Netlify) — pending
+## Hosting — GitHub Pages (live)
 
-1. Sign up at [netlify.com](https://netlify.com) (free: 100 GB/mo bandwidth)
-2. Drag the `english_lessons` folder onto [app.netlify.com/drop](https://app.netlify.com/drop)
-3. Get a public URL (renamable); re-drag the folder to update
+- **Live site:** https://koalaa13.github.io/
+- Repo: `koalaa13/koalaa13.github.io` (public — required for free Pages),
+  deployed from `master` branch root
+- The `english_lessons` folder IS the git repo — updating the site is:
 
-Without Supabase keys, the hosted app still works fully — but data is per-device
-(localStorage), synced manually via Export/Import.
+```bash
+cd ~/english_lessons
+git add -A && git commit -m "new words" && git push
+```
+
+- Old site content (csgoteammates, 2021) was replaced; its history remains
+  in git if ever needed
+- Note: commits carry the git-configured email address publicly
 
 ## VM self-hosting — evaluated and rejected
 
@@ -107,10 +114,9 @@ Supabase chosen instead.
 ## Current status / next steps
 
 - [x] Dashboard with cards, quiz, filters, progress
-- [x] Add/delete words on the site, export/import
-- [x] Data pipeline: `new-words.txt` → Claude generates → `words.js`
-- [x] Sync code written (Supabase, optional — progress only)
-- [ ] Deploy folder to Netlify Drop
-- [ ] First real word batch from a tutor lesson
-- [ ] Optionally: Supabase project for progress sync (steps + SQL above)
+- [x] Data pipeline: `new-words.txt` → Claude generates → `words.js` (skill: `/vocab-cards`)
+- [x] **Hosted on GitHub Pages:** https://koalaa13.github.io/
+- [x] First real word batch (26 cards, 2026-08-23)
+- [ ] Decision: progress is per-device (localStorage) — user chose
+      phone-as-main-device; Supabase sync code remains but disabled
 - [ ] Optionally: real photos per word (local files in an `images/` folder)
