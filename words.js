@@ -577,5 +577,183 @@ window.VOCAB_WORDS = [
       "Air bubbles slowly floated to the surface."
     ],
     "lesson": "2026-08-23"
+  },
+  {
+    "word": "fear of missing out (FOMO)",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "anxiety that other people are having fun or success without you",
+    "emoji": "😰",
+    "image": null,
+    "collocations": [
+      "suffer from FOMO",
+      "fear of missing out on sth",
+      "FOMO kicks in",
+      "out of FOMO"
+    ],
+    "examples": [
+      "I went to the party just out of fear of missing out.",
+      "FOMO kicks in every time I see their vacation photos.",
+      "Social media makes my FOMO so much worse."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "in my opinion",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "used to introduce what you personally think",
+    "emoji": "💭",
+    "image": null,
+    "collocations": [
+      "in my humble opinion (IMHO)",
+      "in my honest opinion",
+      "…, in my opinion"
+    ],
+    "examples": [
+      "In my opinion, the new design is much cleaner.",
+      "In my humble opinion, we should rewrite this module.",
+      "That's the best pizza in town, in my opinion."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to my mind",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "in my opinion (a bit more formal or literary)",
+    "emoji": "🧠",
+    "image": null,
+    "collocations": [
+      "to my mind, …",
+      "…, to my mind"
+    ],
+    "examples": [
+      "To my mind, honesty matters more than politeness.",
+      "It's the perfect solution, to my mind.",
+      "To my mind, remote work beats the office."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to cry wolf",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to raise false alarms so often that people stop believing you",
+    "emoji": "🐺",
+    "image": null,
+    "collocations": [
+      "cry wolf about sth",
+      "cry wolf too often",
+      "keep crying wolf"
+    ],
+    "examples": [
+      "He cried wolf so many times that nobody believed him.",
+      "The monitoring cries wolf so often we mute the alerts.",
+      "If you keep crying wolf, people will ignore real problems."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "quarrel",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈkwɒrəl/",
+    "meaning": "an angry argument, especially between people who know each other well",
+    "emoji": "😠",
+    "image": null,
+    "collocations": [
+      "have a quarrel with sb",
+      "family quarrel",
+      "quarrel about/over sth"
+    ],
+    "examples": [
+      "They had a quarrel about money.",
+      "I don't want to quarrel with you over this.",
+      "It was just a silly lovers' quarrel."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "laid-back",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˌleɪd ˈbæk/",
+    "meaning": "relaxed and calm, not worrying about anything",
+    "emoji": "😎",
+    "image": null,
+    "collocations": [
+      "laid-back attitude",
+      "laid-back atmosphere",
+      "pretty laid-back about sth"
+    ],
+    "examples": [
+      "The office has a really laid-back atmosphere.",
+      "He's too laid-back to stress about exams.",
+      "I love the laid-back vibe of this town."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "faux pas",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˌfəʊ ˈpɑː/",
+    "meaning": "an embarrassing mistake in a social situation",
+    "emoji": "🙈",
+    "image": null,
+    "collocations": [
+      "commit a faux pas",
+      "social faux pas",
+      "major faux pas"
+    ],
+    "examples": [
+      "I committed a real faux pas by asking about her ex.",
+      "Wearing white to the wedding was a major faux pas.",
+      "He made a faux pas at the client dinner."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to humblebrag",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/ˈhʌmbəlbræɡ/",
+    "meaning": "to boast about something while pretending to be modest",
+    "emoji": "🙃",
+    "image": null,
+    "collocations": [
+      "humblebrag about sth",
+      "classic humblebrag"
+    ],
+    "examples": [
+      "\"I'm so tired of flying business class\" — what a humblebrag.",
+      "He humblebragged about his promotion on LinkedIn.",
+      "Stop humblebragging and just say you're proud."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to give someone the cold shoulder",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to deliberately ignore someone or treat them in an unfriendly way",
+    "emoji": "🥶",
+    "image": null,
+    "collocations": [
+      "give sb the cold shoulder",
+      "get the cold shoulder"
+    ],
+    "examples": [
+      "She gave me the cold shoulder after our argument.",
+      "Why are you giving him the cold shoulder?",
+      "He got the cold shoulder from the whole team."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
