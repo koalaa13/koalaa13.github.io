@@ -755,5 +755,64 @@ window.VOCAB_WORDS = [
       "He got the cold shoulder from the whole team."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "to say the least",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "used to show you are describing something much more mildly than you could",
+    "emoji": "🤐",
+    "image": null,
+    "collocations": [
+      "…, to say the least",
+      "it's disappointing, to say the least"
+    ],
+    "examples": [
+      "The meeting was awkward, to say the least.",
+      "His code review was harsh, to say the least.",
+      "I was surprised, to say the least."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "out of spite",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "done deliberately to hurt or annoy someone who upset you",
+    "emoji": "😈",
+    "image": null,
+    "collocations": [
+      "do sth out of spite",
+      "out of pure spite",
+      "sheer spite"
+    ],
+    "examples": [
+      "He deleted my save file out of spite.",
+      "Out of pure spite, she took the last slice.",
+      "He rejected my request just out of spite."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "succinct",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/səkˈsɪŋkt/",
+    "meaning": "expressed clearly in a few words; brief but complete",
+    "emoji": "✂️",
+    "image": null,
+    "collocations": [
+      "succinct summary",
+      "succinct explanation",
+      "keep it succinct"
+    ],
+    "examples": [
+      "Keep your status updates succinct, please.",
+      "She gave a succinct summary of the outage.",
+      "His answer was short and succinct."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
