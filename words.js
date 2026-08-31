@@ -814,5 +814,165 @@ window.VOCAB_WORDS = [
       "His answer was short and succinct."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "cop-out",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈkɒp aʊt/",
+    "meaning": "a weak excuse for avoiding something you should do (also a verb: to cop out)",
+    "emoji": "🏳️",
+    "image": null,
+    "collocations": [
+      "a total cop-out",
+      "that's just a cop-out",
+      "cop out of sth"
+    ],
+    "examples": [
+      "Saying you have no time is just a cop-out.",
+      "He copped out of the presentation at the last minute.",
+      "That's a total cop-out and you know it."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "folly",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈfɒli/",
+    "meaning": "a foolish act or idea; a lack of good judgment",
+    "emoji": "🤡",
+    "image": null,
+    "collocations": [
+      "an act of folly",
+      "sheer folly",
+      "the follies of youth"
+    ],
+    "examples": [
+      "It would be folly to ignore these warnings.",
+      "Deploying on Friday night proved to be folly.",
+      "He laughed at the follies of his youth."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "as bad luck would have it",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "unfortunately; used when fate is unkind (positive version: as luck would have it)",
+    "emoji": "🍀",
+    "image": null,
+    "collocations": [
+      "as bad luck would have it, …",
+      "as luck would have it, …"
+    ],
+    "examples": [
+      "As bad luck would have it, my train was cancelled.",
+      "As bad luck would have it, the server crashed during the demo.",
+      "As luck would have it, we met at the airport."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "under a cloud",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "under suspicion; with people doubting your honesty or reputation",
+    "emoji": "☁️",
+    "image": null,
+    "collocations": [
+      "be under a cloud",
+      "under a cloud of suspicion",
+      "leave under a cloud"
+    ],
+    "examples": [
+      "He left the company under a cloud.",
+      "She's been under a cloud since the scandal.",
+      "The manager worked under a cloud of suspicion."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to loiter",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/ˈlɔɪtə/",
+    "meaning": "to stand or wait somewhere with no clear purpose",
+    "emoji": "🚷",
+    "image": null,
+    "collocations": [
+      "loiter outside/around",
+      "no loitering",
+      "loiter near the entrance"
+    ],
+    "examples": [
+      "Teenagers were loitering outside the shop.",
+      "The sign said: no loitering.",
+      "He loitered near my desk, waiting to ask something."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "enquiry",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ɪnˈkwaɪəri/",
+    "meaning": "BrE: a question or request for information (AmE usually: inquiry)",
+    "emoji": "❓",
+    "image": null,
+    "collocations": [
+      "make an enquiry",
+      "customer enquiry",
+      "respond to an enquiry"
+    ],
+    "examples": [
+      "I'd like to make an enquiry about your prices.",
+      "We received an enquiry from a new client.",
+      "She answered every enquiry within an hour."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "murmur",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈmɜːmə/",
+    "meaning": "a soft, low sound or quiet unclear speech (also a verb)",
+    "emoji": "🤫",
+    "image": null,
+    "collocations": [
+      "a murmur of voices",
+      "murmur quietly",
+      "without a murmur"
+    ],
+    "examples": [
+      "She murmured something I couldn't hear.",
+      "A murmur of agreement went through the room.",
+      "He accepted the extra work without a murmur."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to seize",
+    "type": "word",
+    "pos": "verb",
+    "ipa": "/siːz/",
+    "meaning": "to take something quickly and firmly; (of an emotion) to suddenly take control of you",
+    "emoji": "✊",
+    "image": null,
+    "collocations": [
+      "seize the opportunity",
+      "seized by fear/panic",
+      "seize power",
+      "seize sb's arm"
+    ],
+    "examples": [
+      "She seized the opportunity to speak first.",
+      "He was seized by panic before the demo.",
+      "The customs officers seized the goods."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
