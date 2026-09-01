@@ -974,5 +974,141 @@ window.VOCAB_WORDS = [
       "The customs officers seized the goods."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "I couldn't care less",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "I don't care at all; it doesn't matter to me in the slightest",
+    "emoji": "🤷",
+    "image": null,
+    "collocations": [
+      "couldn't care less about sth",
+      "couldn't care less what/if…"
+    ],
+    "examples": [
+      "I couldn't care less about the score.",
+      "He couldn't care less what people think.",
+      "I couldn't care less if it rains tomorrow."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "practical cunning",
+    "type": "phrase",
+    "pos": "collocation",
+    "ipa": "",
+    "meaning": "street-smart cleverness used to solve real-life problems",
+    "emoji": "🦊",
+    "image": null,
+    "collocations": [
+      "show practical cunning",
+      "require cunning",
+      "low cunning"
+    ],
+    "examples": [
+      "His practical cunning got him out of trouble.",
+      "She fixed the visa problem with practical cunning.",
+      "The plan needed more practical cunning than strength."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to feel at home with sth",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "to feel comfortable and confident using or doing something",
+    "emoji": "🏠",
+    "image": null,
+    "collocations": [
+      "feel at home with sth",
+      "feel at home in a place",
+      "make yourself at home"
+    ],
+    "examples": [
+      "I quickly felt at home with the new codebase.",
+      "She felt at home with the team from day one.",
+      "Make yourself at home!"
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "and a good job too",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "BrE informal: said to show you're glad something happened — it was right or deserved",
+    "emoji": "👏",
+    "image": null,
+    "collocations": [
+      "…, and a good job too",
+      "it's a good job (that)…"
+    ],
+    "examples": [
+      "He got fired — and a good job too!",
+      "They finally fixed the bug, and a good job too.",
+      "It's a good job you reminded me about the meeting."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to turn sth to account",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "formal/old-fashioned: to use something to your own advantage",
+    "emoji": "💰",
+    "image": null,
+    "collocations": [
+      "turn sth to good account",
+      "turn an opportunity to account"
+    ],
+    "examples": [
+      "He turned his free evenings to account by learning Python.",
+      "She turned the long delay to good account.",
+      "They turned every new contact to account."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "lunacy",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈluːnəsi/",
+    "meaning": "extremely foolish or crazy behaviour; madness",
+    "emoji": "🤪",
+    "image": null,
+    "collocations": [
+      "sheer lunacy",
+      "utter lunacy",
+      "it's lunacy to do sth"
+    ],
+    "examples": [
+      "Deploying without tests is sheer lunacy.",
+      "It's lunacy to drive in this storm.",
+      "The plan was utter lunacy from the start."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "set one's teeth on edge",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to irritate someone strongly (especially a sound or a person's manner)",
+    "emoji": "😖",
+    "image": null,
+    "collocations": [
+      "set sb's teeth on edge",
+      "sets my teeth on edge"
+    ],
+    "examples": [
+      "That scraping noise sets my teeth on edge.",
+      "Her whiny voice sets my teeth on edge.",
+      "His constant bragging sets my teeth on edge."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
