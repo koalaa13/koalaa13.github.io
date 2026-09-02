@@ -1110,5 +1110,45 @@ window.VOCAB_WORDS = [
       "His constant bragging sets my teeth on edge."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "chin-wag",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈtʃɪn wæɡ/",
+    "meaning": "BrE informal: a chat, a friendly talk",
+    "emoji": "🗣️",
+    "image": null,
+    "collocations": [
+      "have a chin-wag",
+      "a quick chin-wag",
+      "a good old chin-wag"
+    ],
+    "examples": [
+      "We had a good chin-wag over coffee.",
+      "Let's have a quick chin-wag after standup.",
+      "They chin-wagged for hours about old times."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to beat around the bush",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to talk around a topic instead of saying the main thing directly",
+    "emoji": "🌳",
+    "image": null,
+    "collocations": [
+      "stop beating around the bush",
+      "don't beat around the bush",
+      "beat about the bush (BrE)"
+    ],
+    "examples": [
+      "Stop beating around the bush — what's the problem?",
+      "He beat around the bush before asking for a raise.",
+      "Don't beat around the bush, just give me the estimate."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
