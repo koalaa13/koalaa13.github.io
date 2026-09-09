@@ -1210,5 +1210,163 @@ window.VOCAB_WORDS = [
       "In that house, she felt of no account."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "keep your mouth shut",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to not tell anyone about something; to stay silent",
+    "emoji": "🙊",
+    "image": null,
+    "collocations": [
+      "keep your mouth shut about sth",
+      "can't keep his mouth shut"
+    ],
+    "examples": [
+      "Just keep your mouth shut about the surprise party.",
+      "He couldn't keep his mouth shut about the layoffs.",
+      "Keep your mouth shut and let me do the talking."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to hold your tongue",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to stop yourself from saying something you really want to say",
+    "emoji": "👅",
+    "image": null,
+    "collocations": [
+      "hold your tongue",
+      "had to hold my tongue"
+    ],
+    "examples": [
+      "I had to hold my tongue during the argument.",
+      "She held her tongue instead of criticizing his code.",
+      "Hold your tongue — now is not the time."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to cross the line",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to go beyond what is acceptable behaviour",
+    "emoji": "🚫",
+    "image": null,
+    "collocations": [
+      "cross the line",
+      "that crosses the line",
+      "way over the line"
+    ],
+    "examples": [
+      "His joke about her family crossed the line.",
+      "You crossed the line in that meeting.",
+      "There's banter, and then there's crossing the line."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to be on thin ice",
+    "type": "idiom",
+    "pos": "idiom",
+    "ipa": "",
+    "meaning": "to be in a risky situation where one more mistake means trouble",
+    "emoji": "⛸️",
+    "image": null,
+    "collocations": [
+      "be on thin ice",
+      "skate on thin ice",
+      "walking on thin ice"
+    ],
+    "examples": [
+      "After two missed deadlines, he's on thin ice.",
+      "You're skating on thin ice with that attitude.",
+      "The project is on thin ice with the client."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "captivating",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˈkæptɪveɪtɪŋ/",
+    "meaning": "holding your attention completely; fascinating",
+    "emoji": "✨",
+    "image": null,
+    "collocations": [
+      "captivating story",
+      "absolutely captivating",
+      "captivating performance"
+    ],
+    "examples": [
+      "Her conference talk was absolutely captivating.",
+      "It's a captivating book — I finished it in two days.",
+      "The documentary was captivating from start to finish."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "gripping",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˈɡrɪpɪŋ/",
+    "meaning": "so exciting you can't stop watching or reading",
+    "emoji": "🍿",
+    "image": null,
+    "collocations": [
+      "gripping thriller",
+      "a gripping read",
+      "gripping from start to finish"
+    ],
+    "examples": [
+      "It's a gripping thriller — I couldn't put it down.",
+      "The final episode was absolutely gripping.",
+      "He gave a gripping account of the rescue."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "common ground",
+    "type": "phrase",
+    "pos": "collocation",
+    "ipa": "",
+    "meaning": "shared opinions or interests that help people agree",
+    "emoji": "🌉",
+    "image": null,
+    "collocations": [
+      "find common ground",
+      "have no common ground",
+      "seek common ground"
+    ],
+    "examples": [
+      "We finally found common ground on the design.",
+      "They have no common ground at all.",
+      "The two teams found common ground over coffee."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "within the law",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "legally; without breaking the law",
+    "emoji": "📜",
+    "image": null,
+    "collocations": [
+      "act within the law",
+      "stay within the law",
+      "perfectly within the law"
+    ],
+    "examples": [
+      "We acted entirely within the law.",
+      "He stayed within the law but bent every rule.",
+      "The investigation must operate within the law."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
