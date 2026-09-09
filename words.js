@@ -1150,5 +1150,65 @@ window.VOCAB_WORDS = [
       "Don't beat around the bush, just give me the estimate."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "turmoil",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈtɜːmɔɪl/",
+    "meaning": "a state of great confusion, disorder or anxiety",
+    "emoji": "🌪️",
+    "image": null,
+    "collocations": [
+      "in turmoil",
+      "political/emotional turmoil",
+      "throw sth into turmoil",
+      "inner turmoil"
+    ],
+    "examples": [
+      "The layoffs threw the whole team into turmoil.",
+      "The country is in political turmoil.",
+      "She hid her inner turmoil behind a smile."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "witty",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/ˈwɪti/",
+    "meaning": "funny in a clever, intelligent way",
+    "emoji": "😏",
+    "image": null,
+    "collocations": [
+      "witty remark",
+      "witty banter",
+      "quick-witted"
+    ],
+    "examples": [
+      "He's known for his witty remarks in meetings.",
+      "The book is full of witty dialogue.",
+      "She made a witty comment about my commit message."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "to be of no account",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "formal/literary: to be unimportant, of no significance",
+    "emoji": "🫥",
+    "image": null,
+    "collocations": [
+      "be of no account",
+      "of little account"
+    ],
+    "examples": [
+      "His opinion is of no account here.",
+      "The cost is of no account compared to safety.",
+      "In that house, she felt of no account."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
