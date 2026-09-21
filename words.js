@@ -1368,5 +1368,104 @@ window.VOCAB_WORDS = [
       "The investigation must operate within the law."
     ],
     "lesson": "2026-08-25"
+  },
+  {
+    "word": "it takes nerve",
+    "type": "phrase",
+    "pos": "expression",
+    "ipa": "",
+    "meaning": "it requires courage or boldness (to do something difficult)",
+    "emoji": "🦁",
+    "image": null,
+    "collocations": [
+      "it takes (a lot of) nerve to do sth",
+      "gather one's nerve",
+      "have the nerve to do sth"
+    ],
+    "examples": [
+      "It takes a lot of nerve to speak up in a big meeting.",
+      "He had the nerve to ask for a raise twice in a year.",
+      "She finally gathered her nerve and hit 'deploy'."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "frank",
+    "type": "word",
+    "pos": "adjective",
+    "ipa": "/fræŋk/",
+    "meaning": "honest and direct, even when the truth is uncomfortable",
+    "emoji": "🗯️",
+    "image": null,
+    "collocations": [
+      "to be frank (with you)",
+      "frank discussion",
+      "frank opinion"
+    ],
+    "examples": [
+      "To be frank, the design isn't working.",
+      "We had a frank discussion about salaries.",
+      "Let me be frank with you — this needs a rewrite."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "epitome",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ɪˈpɪtəmi/",
+    "meaning": "a perfect or typical example of a quality",
+    "emoji": "🏆",
+    "image": null,
+    "collocations": [
+      "the epitome of sth",
+      "the very epitome of…"
+    ],
+    "examples": [
+      "She is the epitome of elegance.",
+      "The hotel was the epitome of luxury.",
+      "He's the epitome of a true professional."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "closure",
+    "type": "word",
+    "pos": "noun",
+    "ipa": "/ˈkləʊʒə/",
+    "meaning": "a feeling of emotional resolution after something difficult ends",
+    "emoji": "🚪",
+    "image": null,
+    "collocations": [
+      "get closure",
+      "need closure",
+      "a sense of closure"
+    ],
+    "examples": [
+      "I need closure before I can move on.",
+      "The final conversation gave me a sense of closure.",
+      "She never got closure after the breakup."
+    ],
+    "lesson": "2026-08-25"
+  },
+  {
+    "word": "distorted perception",
+    "type": "phrase",
+    "pos": "collocation",
+    "ipa": "",
+    "meaning": "a twisted, inaccurate way of seeing or understanding things",
+    "emoji": "🪞",
+    "image": null,
+    "collocations": [
+      "distorted perception of reality",
+      "distorted view",
+      "distorted image"
+    ],
+    "examples": [
+      "Social media creates a distorted perception of success.",
+      "He has a distorted perception of his own skills.",
+      "The tabloids give a distorted view of the situation."
+    ],
+    "lesson": "2026-08-25"
   }
 ];
