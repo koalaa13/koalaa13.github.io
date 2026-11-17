@@ -1,9 +1,167 @@
 <!doctype html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Словарь переехал</title>
-<style>body{font:17px/1.6 system-ui,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:24px}main{max-width:660px;margin:8vh auto}h1{line-height:1.2}a{color:#38bdf8}button{background:#38bdf8;color:#0f172a;border:0;border-radius:10px;padding:14px 18px;font:inherit;font-weight:600;cursor:pointer}#status{color:#94a3b8}li{margin:12px 0}</style></head>
-<body><main><h1>Словарь переехал на VPS</h1><p>Новый адрес: <a href="https://english.koalaa13.ru/">english.koalaa13.ru</a>. Слова и новые отметки теперь сохраняются на сервере и доступны с разных устройств.</p><ol><li>На устройстве, где ты учил слова, скачай старый прогресс кнопкой ниже.</li><li>Открой новый сайт и войди с теми же логином и паролем, что у Радара.</li><li>Нажми <strong>Import progress</strong> и выбери скачанный JSON. Существующие серверные отметки сохранятся.</li></ol><p><button id="export">Скачать старый прогресс</button></p><p id="status" role="status"></p><p>Эта страница только читает сохранённые отметки из браузера. Она их не удаляет и никуда автоматически не отправляет. Если учился на нескольких устройствах, экспортируй прогресс с каждого.</p></main>
-<script>
-'use strict';
-function read(key,fallback){const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback;}
-document.getElementById('export').onclick=()=>{try{const progress=read('vocab-progress-v1',{}),words=read('vocab-custom-v1',[]);if(!progress||typeof progress!=='object'||Array.isArray(progress)||!Array.isArray(words))throw new Error('Неверный формат старых данных');const payload={schemaVersion:1,exportedAt:new Date().toISOString(),progress,words};const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='vocabulary-legacy-'+new Date().toISOString().slice(0,10)+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById('status').textContent='Экспортировано отметок: '+Object.keys(progress).length+', своих карточек: '+words.length+'. Старые данные оставлены в браузере.';}catch(e){document.getElementById('status').textContent='Не удалось прочесть прогресс: '+e.message;}};
-</script></body></html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <meta name="description" content="Личный английский словарь переехал. Открой новый адрес или сохрани свой прежний прогресс.">
+  <title>Твой словарь переехал</title>
+  <style>
+    :root { color-scheme: light; --paper:#f4f3ed; --ink:#24382f; --muted:#69756d; --line:#d9dfd4; --green:#31563e; --warm:#d8a885; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+    a,button,summary { -webkit-tap-highlight-color:transparent; }
+    a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid #b5774e; outline-offset:6px; }
+    .page { max-width:1140px; margin:0 auto; padding:34px 44px 26px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:11px; font-size:14px; font-weight:650; letter-spacing:-.25px; }
+    .brand-mark { display:grid; place-items:center; width:35px; height:35px; border:1px solid var(--ink); border-radius:50%; font:italic 22px Georgia,serif; }
+    .address { color:var(--muted); font-size:12px; letter-spacing:.25px; }
+    .hero { display:grid; grid-template-columns:1.08fr 1fr; align-items:center; gap:28px; padding:72px 0 42px; }
+    .eyebrow { display:flex; align-items:center; gap:9px; margin:0 0 22px; color:var(--muted); font-size:11px; font-weight:600; letter-spacing:1.6px; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:21px; height:1px; background:var(--muted); }
+    h1 { max-width:600px; margin:0; font-size:clamp(42px,5.7vw,66px); font-weight:500; letter-spacing:-3px; line-height:1.08; }
+    h1 em { font-family:Georgia,"Times New Roman",serif; font-weight:400; }
+    .intro { max-width:370px; margin:25px 0 29px; color:var(--muted); font-size:16px; line-height:1.75; }
+    .cta { display:inline-flex; align-items:center; justify-content:center; gap:28px; padding:17px 23px; border:1px solid var(--green); border-radius:9px; background:var(--green); color:#fff; text-decoration:none; font-size:14px; font-weight:600; box-shadow:0 5px 14px #24382f0d; transition:background .2s,transform .2s; }
+    .cta:hover { background:#24442f; transform:translateY(-2px); }
+    .cta svg { width:18px; height:18px; }
+    .caption { display:block; margin-top:12px; color:var(--muted); font-size:11px; letter-spacing:.15px; }
+    .art { position:relative; width:100%; max-width:485px; margin:0 auto; }
+    .art::before { content:""; position:absolute; inset:6% 1% 6% 3%; border:1px solid #e0e4d9; border-radius:50%; }
+    .art::after { content:""; position:absolute; inset:16% 11% 16% 13%; border:1px dashed #d9dfd3; border-radius:50%; }
+    .art svg { position:relative; display:block; width:100%; height:auto; z-index:1; overflow:visible; }
+    .transfer { border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-top:8px; }
+    summary { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0; list-style:none; cursor:pointer; font-size:13px; font-weight:500; }
+    summary::-webkit-details-marker { display:none; }
+    .summary-label { display:flex; align-items:center; gap:11px; }
+    .summary-label svg { width:17px; height:17px; color:var(--muted); }
+    .plus { display:block; width:14px; height:14px; position:relative; flex-shrink:0; }
+    .plus::before,.plus::after { position:absolute; content:""; background:var(--muted); top:6px; left:1px; width:12px; height:1px; }
+    .plus::after { transform:rotate(90deg); transition:transform .2s; }
+    details[open] .plus::after { transform:rotate(0deg); }
+    .transfer-content { padding:0 0 24px 28px; max-width:735px; color:var(--muted); font-size:13px; line-height:1.8; }
+    .transfer-content p { margin:0 0 15px; }
+    ol { padding-left:19px; margin:0 0 19px; }
+    li { padding-left:4px; margin-bottom:6px; }
+    .export { border:1px solid #bdc8b9; border-radius:7px; padding:11px 16px; background:transparent; color:var(--ink); font-family:inherit; font-size:12px; font-weight:600; line-height:1.4; cursor:pointer; transition:background .2s; }
+    .export:hover { background:#e9ede3; }
+    .privacy { margin:15px 0 0 !important; max-width:590px; color:var(--muted); font-size:11px; line-height:1.8; }
+    #status { margin:13px 0 0; color:var(--green); font-size:12px; overflow-wrap:anywhere; }
+    footer { display:flex; justify-content:space-between; gap:15px; padding-top:24px; color:#849084; font-size:10px; letter-spacing:.25px; }
+    @media (min-width:1400px) { .page { padding-top:48px; } .hero { padding-top:104px; padding-bottom:64px; } }
+    @media (max-width:760px) {
+      .page { max-width:570px; padding:23px 25px; }
+      .address { font-size:10px; }
+      .hero { grid-template-columns:1fr; gap:8px; padding:55px 0 20px; }
+      h1 { font-size:52px; letter-spacing:-2.5px; }
+      .intro { max-width:340px; margin-top:21px; margin-bottom:24px; font-size:15px; }
+      .art { max-width:330px; margin:16px auto -6px; }
+      .eyebrow { font-size:10px; margin-bottom:18px; }
+      .transfer-content { padding-left:0; }
+      footer { font-size:9px; padding-top:20px; }
+    }
+    @media (max-width:370px) { .page { padding-right:20px; padding-left:20px; } h1 { font-size:46px; } .address { display:none; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none !important; } .cta:hover { transform:none; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">w</span>Личный словарь</div>
+      <span class="address">english.koalaa13.ru</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <p class="eyebrow">Новая глава</p>
+          <h1 id="title">Твой словарь<br><em>переехал.</em></h1>
+          <p class="intro">Все слова — на новом адресе. Прогресс теперь сохраняется и доступен с&nbsp;телефона и компьютера.</p>
+          <a class="cta" href="https://english.koalaa13.ru/">Открыть словарь<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <span class="caption">english.koalaa13.ru</span>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 480 420" fill="none" focusable="false">
+            <defs>
+              <linearGradient id="left" x1="89" y1="177" x2="241" y2="302" gradientUnits="userSpaceOnUse"><stop stop-color="#fffcf5"/><stop offset="1" stop-color="#e6e4d6"/></linearGradient>
+              <linearGradient id="right" x1="241" y1="169" x2="390" y2="299" gradientUnits="userSpaceOnUse"><stop stop-color="#f2f0e5"/><stop offset="1" stop-color="#fffdf7"/></linearGradient>
+              <filter id="shadow" x="20" y="56" width="450" height="365" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="13"/></filter>
+            </defs>
+            <ellipse cx="242" cy="323" rx="143" ry="17" fill="#344832" opacity=".09" filter="url(#shadow)"/>
+            <g transform="rotate(-12 150 170)">
+              <rect x="109" y="82" width="114" height="151" rx="10" fill="#d3a27d"/>
+              <rect x="115" y="77" width="114" height="151" rx="10" fill="#ebc09d" stroke="#d1aa88"/>
+              <rect x="131" y="93" width="31" height="6" rx="3" fill="#c58d66" opacity=".7"/>
+              <path d="M135 149c5-15 18-22 30-18 17 7 20 23 12 35-6 8-13 11-14 22m-1 12v2" stroke="#9f6746" stroke-width="3" stroke-linecap="round"/>
+              <path d="M132 213h76" stroke="#ce9c77"/>
+            </g>
+            <g transform="rotate(10 301 162)">
+              <rect x="253" y="79" width="114" height="153" rx="10" fill="#819380"/>
+              <rect x="247" y="72" width="114" height="153" rx="10" fill="#a3b39a" stroke="#8d9f85"/>
+              <rect x="263" y="88" width="33" height="6" rx="3" fill="#647e61" opacity=".7"/>
+              <path d="m276 151 19 18 33-39" stroke="#506f50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M265 209h78" stroke="#829a7a"/>
+            </g>
+            <path d="M76 186c59-14 110-8 165 17 48-25 102-32 163-17v131c-66-14-116-6-163 17-56-23-108-31-165-17V186Z" fill="#526d50" stroke="#415f40" stroke-width="1.5"/>
+            <path d="M84 180c53-14 108-5 157 20 45-24 102-34 155-20v128c-59-11-112-4-155 20-50-24-105-30-157-20V180Z" fill="#dedecf"/>
+            <path d="M90 172c51-11 103-5 151 20v128c-47-24-101-31-151-20V172Z" fill="url(#left)" stroke="#d4d6c7"/>
+            <path d="M241 192c45-25 98-31 149-20v128c-49-11-104-4-149 20V192Z" fill="url(#right)" stroke="#d4d6c7"/>
+            <path d="M241 195v121" stroke="#bfc5b3" stroke-width="1.5"/>
+            <path d="M112 204c32-3 65 2 97 14M112 220c32-3 65 2 97 14M112 236c32-3 65 2 97 14M112 252c32-3 65 2 97 14M112 268c21-2 41 0 61 5" stroke="#b2bda7" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+            <path d="M273 218c29-11 60-15 91-13M273 234c29-11 60-15 91-13M273 250c29-11 60-15 91-13M273 266c29-11 60-15 91-13M273 282c21-8 41-11 60-12" stroke="#b2bda7" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+            <path d="M319 175v57l11-9 11 5v-56" fill="#d8a885" stroke="#c99a76"/>
+            <circle cx="96" cy="116" r="4" fill="#9cae92"/>
+            <circle cx="398" cy="247" r="3" fill="#c99a76"/>
+            <path d="M381 117v14m-7-7h14M78 262v10m-5-5h10" stroke="#a5b199" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </section>
+      <details class="transfer">
+        <summary><span class="summary-label"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m-3-3 3 3 3-3M4 12v4h12v-4" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>Перенести старый прогресс</span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="transfer-content">
+          <p>Если ты уже отмечал выученные слова на этом устройстве, сохрани эти отметки перед переходом.</p>
+          <ol>
+            <li>Скачай файл кнопкой ниже.</li>
+            <li>Открой новый словарь. Логин и пароль — те же, что у Радара.</li>
+            <li>Выбери импорт прогресса и загрузи скачанный JSON.</li>
+          </ol>
+          <button class="export" id="export" type="button">Скачать старый прогресс</button>
+          <p id="status" role="status" aria-live="polite" hidden></p>
+          <p class="privacy">Файл создаётся только из данных этого браузера. Старые отметки не удаляются и никуда автоматически не отправляются. Если учился на нескольких устройствах, сохрани прогресс с каждого.</p>
+        </div>
+      </details>
+    </main>
+    <footer><span>Маленькие шаги. Больше знакомых слов.</span><span>Личный словарь · English</span></footer>
+  </div>
+  <script>
+    'use strict';
+    function read(key, fallback) {
+      const raw = localStorage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
+    }
+    document.getElementById('export').addEventListener('click', function () {
+      const status = document.getElementById('status');
+      status.hidden = false;
+      try {
+        const progress = read('vocab-progress-v1', {});
+        const words = read('vocab-custom-v1', []);
+        if (!progress || typeof progress !== 'object' || Array.isArray(progress) || !Array.isArray(words)) {
+          throw new Error('неверный формат старых данных');
+        }
+        const payload = { schemaVersion: 1, exportedAt: new Date().toISOString(), progress: progress, words: words };
+        const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'vocabulary-legacy-' + new Date().toISOString().slice(0, 10) + '.json';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+        status.textContent = 'Файл готов. Отметок: ' + Object.keys(progress).length + ', своих карточек: ' + words.length + '. Исходные данные сохранены в браузере.';
+      } catch (error) {
+        status.textContent = 'Не удалось прочесть прогресс: ' + error.message + '.';
+      }
+    });
+  </script>
+</body>
+</html>
